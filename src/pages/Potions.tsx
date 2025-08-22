@@ -1,4 +1,5 @@
 import Navigation from "@/components/Navigation";
+import Footer from "@/components/Footer";
 import { Button } from "@/components/ui/button";
 import { Card, CardContent, CardHeader, CardTitle } from "@/components/ui/card";
 import { Link } from "react-router-dom";
@@ -230,6 +231,8 @@ const Potions = () => {
           </div>
         </div>
       </section>
+      
+      <Footer />
     </div>
   );
 };

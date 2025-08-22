@@ -8,23 +8,23 @@
   :root {
     /* Alchemical Color Palette */
     --background: 240 10% 4%;
-    --foreground: 45 100% 85%;
+    --foreground: 45 100% 95%;
 
-    --card: 240 8% 6%;
-    --card-foreground: 45 100% 85%;
+    --card: 240 8% 8%;
+    --card-foreground: 45 100% 95%;
 
-    --popover: 240 8% 6%;
-    --popover-foreground: 45 100% 85%;
+    --popover: 240 8% 8%;
+    --popover-foreground: 45 100% 95%;
 
-    --primary: 270 60% 50%;
-    --primary-foreground: 45 100% 95%;
-    --primary-glow: 270 80% 70%;
+    --primary: 270 60% 55%;
+    --primary-foreground: 45 100% 98%;
+    --primary-glow: 270 80% 75%;
 
-    --secondary: 45 90% 65%;
-    --secondary-foreground: 240 100% 10%;
+    --secondary: 45 90% 70%;
+    --secondary-foreground: 240 100% 8%;
 
-    --muted: 240 5% 15%;
-    --muted-foreground: 240 10% 60%;
+    --muted: 240 5% 18%;
+    --muted-foreground: 45 60% 75%;
 
     --accent: 280 100% 70%;
     --accent-foreground: 240 100% 5%;
