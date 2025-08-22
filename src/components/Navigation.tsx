@@ -16,7 +16,6 @@ const Navigation = () => {
     { name: "Blog", path: "/blog" },
     { name: "Carrière", path: "/carriere" },
     { name: "Contact", path: "/contact" },
-    { name: "Devis gratuit", path: "/devis" },
   ];
 
   const potionItems = [
@@ -75,11 +74,9 @@ const Navigation = () => {
 
           {/* CTA Button */}
           <div className="hidden md:block">
-            <Link to="/devis">
-              <Button className="gradient-primary text-primary-foreground hover:shadow-magical transition-magical">
-                Demandez votre devis 🔮
-              </Button>
-            </Link>
+            <Button className="gradient-primary text-primary-foreground hover:shadow-magical transition-magical">
+              Demandez votre potion 🔮
+            </Button>
           </div>
 
           {/* Mobile menu button */}
@@ -120,11 +117,9 @@ const Navigation = () => {
               </div>
             ))}
             <div className="pt-4">
-              <Link to="/devis">
-                <Button className="w-full gradient-primary text-primary-foreground">
-                  Demandez votre devis 🔮
-                </Button>
-              </Link>
+              <Button className="w-full gradient-primary text-primary-foreground">
+                Demandez votre potion 🔮
+              </Button>
             </div>
           </div>
         )}

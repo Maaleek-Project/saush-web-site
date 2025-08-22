@@ -36,9 +36,7 @@ const Index = () => {
                   size="lg" 
                   className="gradient-primary text-primary-foreground hover:shadow-magical transition-magical text-lg px-8 py-6"
                 >
-                  <Link to="/devis" className="text-inherit">
-                    Demandez votre potion créative 🔮
-                  </Link>
+                  Demandez votre potion créative 🔮
                 </Button>
                 <Button 
                   variant="outline" 
@@ -203,25 +201,25 @@ const Index = () => {
               Chaque grande marque commence par une première conversation. 
               Parlons de votre projet et trouvons la potion parfaite.
             </p>
-              <div className="flex flex-col sm:flex-row gap-4 justify-center">
-                <Link to="/devis">
-                  <Button 
-                    size="lg" 
-                    className="gradient-primary text-primary-foreground hover:shadow-magical transition-magical text-lg px-12 py-6"
-                  >
-                    Commencer l'alchimie 🔮
-                  </Button>
-                </Link>
-                <Link to="/packs">
-                  <Button 
-                    variant="outline" 
-                    size="lg"
-                    className="border-2 border-secondary text-secondary hover:bg-secondary hover:text-secondary-foreground transition-magical text-lg px-12 py-6"
-                  >
-                    Voir nos packs ⭐
-                  </Button>
-                </Link>
-              </div>
+            <div className="flex flex-col sm:flex-row gap-4 justify-center">
+              <Link to="/contact">
+                <Button 
+                  size="lg" 
+                  className="gradient-primary text-primary-foreground hover:shadow-magical transition-magical text-lg px-12 py-6"
+                >
+                  Commencer l'alchimie 🔮
+                </Button>
+              </Link>
+              <Link to="/packs">
+                <Button 
+                  variant="outline" 
+                  size="lg"
+                  className="border-2 border-secondary text-secondary hover:bg-secondary hover:text-secondary-foreground transition-magical text-lg px-12 py-6"
+                >
+                  Voir nos packs ⭐
+                </Button>
+              </Link>
+            </div>
           </div>
         </div>
       </section>
