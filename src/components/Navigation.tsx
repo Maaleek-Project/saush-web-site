@@ -2,8 +2,6 @@ import { useState } from "react";
 import { Link, useLocation } from "react-router-dom";
 import { Button } from "@/components/ui/button";
 import { Menu, X } from "lucide-react";
-import DevisModal from "@/components/DevisModal";
-import logoSaush from "@/assets/logo-saush.png";
 
 const Navigation = () => {
   const [isOpen, setIsOpen] = useState(false);
@@ -18,7 +16,6 @@ const Navigation = () => {
     { name: "Blog", path: "/blog" },
     { name: "Carrière", path: "/carriere" },
     { name: "Contact", path: "/contact" },
-    { name: "Devis gratuit", path: "/devis" },
   ];
 
   const potionItems = [
@@ -34,7 +31,12 @@ const Navigation = () => {
         <div className="flex items-center justify-between h-16">
           {/* Logo */}
           <Link to="/" className="flex items-center space-x-2">
-            <img src={logoSaush} alt="SAUSH" className="h-12 w-auto" />
+            <div className="w-10 h-10 gradient-primary rounded-lg flex items-center justify-center">
+              <span className="text-xl font-bold text-primary-foreground">S</span>
+            </div>
+            <span className="text-xl font-bold gradient-gold bg-clip-text text-transparent">
+              SAUSH
+            </span>
           </Link>
 
           {/* Desktop Navigation */}
@@ -72,11 +74,9 @@ const Navigation = () => {
 
           {/* CTA Button */}
           <div className="hidden md:block">
-            <DevisModal>
-              <Button className="gradient-primary text-primary-foreground hover:shadow-magical transition-magical">
-                Demandez votre devis gratuitement 🔮
-              </Button>
-            </DevisModal>
+            <Button className="gradient-primary text-primary-foreground hover:shadow-magical transition-magical">
+              Demandez votre potion 🔮
+            </Button>
           </div>
 
           {/* Mobile menu button */}
@@ -117,11 +117,9 @@ const Navigation = () => {
               </div>
             ))}
             <div className="pt-4">
-              <DevisModal>
-                <Button className="w-full gradient-primary text-primary-foreground">
-                  Demandez votre devis gratuitement 🔮
-                </Button>
-              </DevisModal>
+              <Button className="w-full gradient-primary text-primary-foreground">
+                Demandez votre potion 🔮
+              </Button>
             </div>
           </div>
         )}

@@ -1,7 +1,6 @@
 import { Button } from "@/components/ui/button";
 import { Card, CardContent } from "@/components/ui/card";
 import { Link } from "react-router-dom";
-import DevisModal from "@/components/DevisModal";
 
 const Footer = () => {
   return (
@@ -88,18 +87,6 @@ const Footer = () => {
                   Carrière
                 </Link>
               </li>
-              <li>
-                <Link to="/contact" className="text-muted-foreground hover:text-secondary transition-colors">
-                  Contact
-                </Link>
-              </li>
-              <li>
-                <DevisModal>
-                  <button className="text-muted-foreground hover:text-secondary transition-colors text-left">
-                    Devis gratuit
-                  </button>
-                </DevisModal>
-              </li>
             </ul>
           </div>
 
@@ -107,18 +94,18 @@ const Footer = () => {
           <div className="space-y-6">
             <h4 className="text-lg font-semibold text-foreground">Commencer l'alchimie</h4>
             <Card className="bg-gradient-primary border-none">
-               <CardContent className="p-6 text-center space-y-4">
-                 <p className="text-primary-foreground font-medium">
-                   Prêt à transformer votre communication ?
-                 </p>
-                 <DevisModal>
-                   <Button 
-                     className="w-full bg-secondary text-secondary-foreground hover:bg-secondary/90 transition-magical"
-                   >
-                     Devis gratuit 🔮
-                   </Button>
-                 </DevisModal>
-               </CardContent>
+              <CardContent className="p-6 text-center space-y-4">
+                <p className="text-primary-foreground font-medium">
+                  Prêt à transformer votre communication ?
+                </p>
+                <Link to="/contact">
+                  <Button 
+                    className="w-full bg-secondary text-secondary-foreground hover:bg-secondary/90 transition-magical"
+                  >
+                    Demander un devis 🔮
+                  </Button>
+                </Link>
+              </CardContent>
             </Card>
           </div>
         </div>

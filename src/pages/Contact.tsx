@@ -8,102 +8,102 @@ import { Label } from "@/components/ui/label";
 
 const Contact = () => {
   return (
-    <div className="min-h-screen bg-card">
+    <div className="min-h-screen animated-bg">
       <Navigation />
       
       {/* Hero Section */}
-      <section className="pt-20 pb-20 px-4 bg-card">
+      <section className="pt-20 pb-20 px-4">
         <div className="container mx-auto text-center">
-          <h1 className="text-4xl lg:text-6xl font-bold mb-8 text-card-foreground">
-            📞 Une idée en tête ?{" "}
+          <h1 className="text-4xl lg:text-6xl font-bold mb-8">
+            📞 Un projet ? Une idée ?{" "}
             <span className="gradient-primary bg-clip-text text-transparent">
-              On en parle ?
+              Parlons-en
             </span>
           </h1>
-          <p className="text-xl text-card-foreground max-w-3xl mx-auto leading-relaxed mb-12">
+          <p className="text-xl text-muted-foreground max-w-3xl mx-auto leading-relaxed mb-12">
             Chaque grande collaboration commence par une conversation. 
             Dites-nous ce que vous voulez accomplir et nous trouverons la potion adaptée.
           </p>
         </div>
       </section>
 
-      <section className="pb-20 px-4 bg-card">
+      <section className="pb-20 px-4">
         <div className="container mx-auto max-w-4xl">
           <div className="grid lg:grid-cols-2 gap-12">
             {/* Contact Form */}
-            <Card className="bg-background border-border shadow-magical">
+            <Card className="bg-card/50 border-border shadow-magical">
               <CardContent className="p-8">
-                <h2 className="text-2xl font-bold mb-6 text-center text-foreground">
+                <h2 className="text-2xl font-bold mb-6 text-center">
                   ✨ Formulaire magique
                 </h2>
                 <form className="space-y-6">
                   <div className="grid md:grid-cols-2 gap-4">
                     <div className="space-y-2">
-                      <Label htmlFor="firstName" className="text-foreground">Prénom *</Label>
+                      <Label htmlFor="firstName">Prénom *</Label>
                       <Input 
                         id="firstName"
                         placeholder="Votre prénom"
-                        className="bg-background border-border focus:ring-primary text-foreground"
+                        className="bg-input border-border focus:ring-primary"
                       />
                     </div>
                     <div className="space-y-2">
-                      <Label htmlFor="lastName" className="text-foreground">Nom *</Label>
+                      <Label htmlFor="lastName">Nom *</Label>
                       <Input 
                         id="lastName"
                         placeholder="Votre nom"
-                        className="bg-background border-border focus:ring-primary text-foreground"
+                        className="bg-input border-border focus:ring-primary"
                       />
                     </div>
                   </div>
                   
                   <div className="space-y-2">
-                    <Label htmlFor="email" className="text-foreground">Email *</Label>
+                    <Label htmlFor="email">Email *</Label>
                     <Input 
                       id="email"
                       type="email"
                       placeholder="votre@email.com"
-                      className="bg-background border-border focus:ring-primary text-foreground"
+                      className="bg-input border-border focus:ring-primary"
                     />
                   </div>
                   
                   <div className="space-y-2">
-                    <Label htmlFor="phone" className="text-foreground">Téléphone / WhatsApp</Label>
+                    <Label htmlFor="phone">Téléphone / WhatsApp</Label>
                     <Input 
                       id="phone"
                       type="tel"
                       placeholder="+225 XX XX XX XX XX"
-                      className="bg-background border-border focus:ring-primary text-foreground"
+                      className="bg-input border-border focus:ring-primary"
                     />
                   </div>
                   
                   <div className="space-y-2">
-                    <Label htmlFor="project" className="text-foreground">Votre projet en quelques lignes *</Label>
+                    <Label htmlFor="project">Votre projet en quelques lignes *</Label>
                     <Textarea 
                       id="project"
                       placeholder="Décrivez-nous votre projet, vos objectifs, vos besoins..."
                       rows={5}
-                      className="bg-background border-border focus:ring-primary resize-none text-foreground"
+                      className="bg-input border-border focus:ring-primary resize-none"
                     />
                   </div>
 
                   <div className="space-y-2">
-                    <Label className="text-foreground">Quelle potion vous intéresse ?</Label>
+                    <Label>Quelle potion vous intéresse ?</Label>
                     <div className="grid grid-cols-2 gap-2">
                       <label className="flex items-center space-x-2 cursor-pointer">
                         <input type="checkbox" className="rounded border-border text-primary focus:ring-primary" />
-                        <span className="text-sm text-foreground">🔮 Identité</span>
+                        <span className="text-sm">🔮 Identité</span>
                       </label>
                       <label className="flex items-center space-x-2 cursor-pointer">
                         <input type="checkbox" className="rounded border-border text-primary focus:ring-primary" />
-                        <span className="text-sm text-foreground">🔮 Stratégie</span>
+                        <span className="text-sm">🔮 Stratégie</span>
                       </label>
                       <label className="flex items-center space-x-2 cursor-pointer">
                         <input type="checkbox" className="rounded border-border text-primary focus:ring-primary" />
-                        <span className="text-sm text-foreground">🔮 Digital</span>
+                        <span className="text-sm">🔮 Digital</span>
                       </label>
                       <label className="flex items-center space-x-2 cursor-pointer">
                         <input type="checkbox" className="rounded border-border text-primary focus:ring-primary" />
-                        <span className="text-sm text-foreground">🔮 Diagnostic</span>
+                        <span className="text-sm">🔮 Diagnostic</span>
                       </label>
                     </div>
                   </div>
@@ -122,7 +122,7 @@ const Contact = () => {
             {/* Contact Info */}
             <div className="space-y-8">
               {/* Direct Contact */}
-              <Card className="bg-background border-border">
+              <Card className="bg-card/50 border-border">
                 <CardContent className="p-6">
                   <h3 className="text-xl font-bold mb-4 text-primary">📲 Contact direct</h3>
                   <div className="space-y-4">
@@ -131,7 +131,7 @@ const Contact = () => {
                         <span className="text-sm text-primary-foreground">📧</span>
                       </div>
                       <div>
-                        <p className="font-medium text-foreground">Email</p>
+                        <p className="font-medium">Email</p>
                         <p className="text-sm text-muted-foreground">infos@saush.africa</p>
                       </div>
                     </div>
@@ -141,7 +141,7 @@ const Contact = () => {
                         <span className="text-sm text-secondary-foreground">📞</span>
                       </div>
                       <div>
-                        <p className="font-medium text-foreground">Téléphone</p>
+                        <p className="font-medium">Téléphone</p>
                         <p className="text-sm text-muted-foreground">+225 XX XX XX XX XX</p>
                       </div>
                     </div>
@@ -189,20 +189,20 @@ const Contact = () => {
               </Card>
 
               {/* FAQ */}
-              <Card className="bg-background border-border">
+              <Card className="bg-card/50 border-border">
                 <CardContent className="p-6">
                   <h3 className="text-xl font-bold mb-4 text-accent">❓ Questions fréquentes</h3>
                   <div className="space-y-4">
                     <div>
-                      <p className="font-medium text-sm mb-1 text-foreground">Combien de temps pour une réponse ?</p>
+                      <p className="font-medium text-sm mb-1">Combien de temps pour une réponse ?</p>
                       <p className="text-xs text-muted-foreground">Maximum 24h, souvent dans la journée.</p>
                     </div>
                     <div>
-                      <p className="font-medium text-sm mb-1 text-foreground">Le devis est-il gratuit ?</p>
+                      <p className="font-medium text-sm mb-1">Le devis est-il gratuit ?</p>
                       <p className="text-xs text-muted-foreground">Oui, totalement gratuit et sans engagement.</p>
                     </div>
                     <div>
-                      <p className="font-medium text-sm mb-1 text-foreground">Vous travaillez avec toutes les entreprises ?</p>
+                      <p className="font-medium text-sm mb-1">Vous travaillez avec toutes les entreprises ?</p>
                       <p className="text-xs text-muted-foreground">Startups, PME, grandes marques... Nous nous adaptons à tous les projets.</p>
                     </div>
                   </div>
@@ -217,7 +217,7 @@ const Contact = () => {
       <section className="py-20 px-4 bg-muted/20">
         <div className="container mx-auto text-center">
           <div className="max-w-3xl mx-auto">
-            <h2 className="text-3xl lg:text-4xl font-bold mb-6 text-card-foreground">
+            <h2 className="text-3xl lg:text-4xl font-bold mb-6">
               Prêt à commencer l'{" "}
               <span className="gradient-potion bg-clip-text text-transparent">
                 alchimie créative

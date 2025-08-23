@@ -16,7 +16,6 @@ import Strategie from "./pages/potions/Strategie";
 import Digital from "./pages/potions/Digital";
 import Diagnostic from "./pages/potions/Diagnostic";
 import NotFound from "./pages/NotFound";
-import Devis from "./pages/Devis";
 
 const queryClient = new QueryClient();
 
@@ -39,7 +38,6 @@ const App = () => (
           <Route path="/blog" element={<Blog />} />
           <Route path="/carriere" element={<Carriere />} />
           <Route path="/contact" element={<Contact />} />
-          <Route path="/devis" element={<Devis />} />
           {/* ADD ALL CUSTOM ROUTES ABOVE THE CATCH-ALL "*" ROUTE */}
           <Route path="*" element={<NotFound />} />
         </Routes>
