@@ -6,15 +6,15 @@
 
 @layer base {
   :root {
-    /* Beautiful Blue & Green Theme */
+    /* Beautiful Green Theme */
     --background: 0 0% 3%;
-    --foreground: 195 100% 80%;
+    --foreground: 0 0% 100%;
 
     --card: 0 0% 7%;
-    --card-foreground: 195 100% 80%;
+    --card-foreground: 0 0% 100%;
 
     --popover: 0 0% 7%;
-    --popover-foreground: 195 100% 80%;
+    --popover-foreground: 0 0% 100%;
 
     --primary: 120 60% 50%;
     --primary-foreground: 0 0% 100%;
@@ -23,7 +23,7 @@
     --secondary: 120 60% 50%;
     --secondary-foreground: 0 0% 100%;
     
-    --highlight: 180 100% 70%;
+    --highlight: 120 60% 50%;
     --highlight-foreground: 0 0% 100%;
 
     --muted: 215 27.9% 16.9%;
@@ -41,10 +41,10 @@
 
     /* Professional Gradients */
     --gradient-primary: linear-gradient(135deg, hsl(120 60% 50%), hsl(120 70% 60%));
-    --gradient-gold: linear-gradient(135deg, hsl(120 60% 50%), hsl(120 70% 60%));
+    --gradient-gold: linear-gradient(135deg, hsl(0 0% 100%), hsl(0 0% 90%));
     --gradient-mystical: linear-gradient(180deg, hsl(0 0% 3%), hsl(0 0% 7%));
-    --gradient-potion: linear-gradient(45deg, hsl(180 100% 70%), hsl(120 60% 50%), hsl(120 70% 60%));
-    --gradient-highlight: linear-gradient(135deg, hsl(180 100% 70%), hsl(180 100% 80%));
+    --gradient-potion: linear-gradient(45deg, hsl(120 60% 50%), hsl(120 70% 60%), hsl(120 80% 70%));
+    --gradient-highlight: linear-gradient(135deg, hsl(120 60% 50%), hsl(120 70% 60%));
 
     /* Clean Shadows & Effects */
     --shadow-magical: 0 10px 40px hsl(120 60% 50% / 0.3);
@@ -91,7 +91,7 @@
     --secondary: 120 60% 40%;
     --secondary-foreground: 0 0% 100%;
     
-    --highlight: 180 100% 50%;
+    --highlight: 120 60% 50%;
     --highlight-foreground: 0 0% 100%;
 
     --muted: 210 40% 96%;
