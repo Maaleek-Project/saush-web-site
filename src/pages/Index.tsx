@@ -4,6 +4,7 @@ import { Button } from "@/components/ui/button";
 import { Card, CardContent } from "@/components/ui/card";
 import { Link } from "react-router-dom";
 import heroImage from "@/assets/hero-laboratory.jpg";
+import DevisModal from "@/components/DevisModal";
 
 const Index = () => {
   return (
@@ -32,14 +33,14 @@ const Index = () => {
                 vos idées en résultats concrets.
               </p>
               <div className="flex flex-col sm:flex-row gap-4">
-                <Button 
-                  size="lg" 
-                  className="gradient-primary text-primary-foreground hover:shadow-magical transition-magical text-lg px-8 py-6"
-                >
-                  <Link to="/devis" className="text-inherit">
+                <DevisModal>
+                  <Button 
+                    size="lg" 
+                    className="gradient-primary text-primary-foreground hover:shadow-magical transition-magical text-lg px-8 py-6"
+                  >
                     Demandez votre devis gratuitement 🔮
-                  </Link>
-                </Button>
+                  </Button>
+                </DevisModal>
                 <Button 
                   variant="outline" 
                   size="lg"
@@ -359,14 +360,14 @@ const Index = () => {
               Parlons de votre projet et trouvons la potion parfaite.
             </p>
               <div className="flex flex-col sm:flex-row gap-4 justify-center">
-                  <Link to="/devis">
-                    <Button 
-                      size="lg" 
-                      className="gradient-primary text-primary-foreground hover:shadow-magical transition-magical text-lg px-12 py-6"
-                    >
-                      Demandez votre devis gratuitement 🔮
-                    </Button>
-                  </Link>
+                <DevisModal>
+                  <Button 
+                    size="lg" 
+                    className="gradient-primary text-primary-foreground hover:shadow-magical transition-magical text-lg px-12 py-6"
+                  >
+                    Demandez votre devis gratuitement 🔮
+                  </Button>
+                </DevisModal>
                 <Link to="/packs">
                   <Button 
                     variant="outline" 
