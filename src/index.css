@@ -6,49 +6,51 @@
 
 @layer base {
   :root {
-    /* Alchemical Color Palette */
-    --background: 240 10% 4%;
-    --foreground: 45 100% 95%;
+    /* Beautiful Blue & Green Theme */
+    --background: 0 0% 3%;
+    --foreground: 195 100% 80%;
 
-    --card: 240 8% 8%;
-    --card-foreground: 45 100% 95%;
+    --card: 0 0% 7%;
+    --card-foreground: 195 100% 80%;
 
-    --popover: 240 8% 8%;
-    --popover-foreground: 45 100% 95%;
+    --popover: 0 0% 7%;
+    --popover-foreground: 195 100% 80%;
 
-    --primary: 270 60% 55%;
-    --primary-foreground: 45 100% 98%;
-    --primary-glow: 270 80% 75%;
+    --primary: 120 60% 50%;
+    --primary-foreground: 0 0% 100%;
+    --primary-glow: 120 70% 60%;
 
-    --secondary: 45 90% 70%;
-    --secondary-foreground: 240 100% 8%;
+    --secondary: 120 60% 50%;
+    --secondary-foreground: 0 0% 100%;
+    
+    --highlight: 180 100% 70%;
+    --highlight-foreground: 0 0% 100%;
 
-    --muted: 240 5% 18%;
-    --muted-foreground: 45 60% 75%;
+    --muted: 215 27.9% 16.9%;
+    --muted-foreground: 217.9 10.6% 64.9%;
 
-    --accent: 280 100% 70%;
-    --accent-foreground: 240 100% 5%;
+    --accent: 142 76% 36%;
+    --accent-foreground: 355 7% 97%;
 
     --destructive: 0 84.2% 60.2%;
-    --destructive-foreground: 45 100% 95%;
+    --destructive-foreground: 210 40% 98%;
 
-    --border: 240 15% 20%;
-    --input: 240 15% 15%;
-    --ring: 270 60% 50%;
+    --border: 215 27.9% 16.9%;
+    --input: 215 27.9% 16.9%;
+    --ring: 220 100% 60%;
 
-    /* Alchemical Gradients */
-    --gradient-primary: linear-gradient(135deg, hsl(270 60% 50%), hsl(280 100% 70%));
-    --gradient-gold: linear-gradient(135deg, hsl(45 90% 65%), hsl(35 100% 75%));
-    --gradient-mystical: linear-gradient(180deg, hsl(240 10% 4%), hsl(270 40% 8%));
-    --gradient-potion: linear-gradient(45deg, hsl(270 60% 50%), hsl(290 80% 60%), hsl(45 90% 65%));
-    --gradient-green: linear-gradient(135deg, hsl(142 76% 36%), hsl(142 76% 46%));
-    --gradient-cyan-gold: linear-gradient(90deg, hsl(180 100% 50%), hsl(45 90% 65%));
+    /* Professional Gradients */
+    --gradient-primary: linear-gradient(135deg, hsl(120 60% 50%), hsl(120 70% 60%));
+    --gradient-gold: linear-gradient(135deg, hsl(120 60% 50%), hsl(120 70% 60%));
+    --gradient-mystical: linear-gradient(180deg, hsl(0 0% 3%), hsl(0 0% 7%));
+    --gradient-potion: linear-gradient(45deg, hsl(180 100% 70%), hsl(120 60% 50%), hsl(120 70% 60%));
+    --gradient-highlight: linear-gradient(135deg, hsl(180 100% 70%), hsl(180 100% 80%));
 
-    /* Magical Shadows & Effects */
-    --shadow-magical: 0 10px 40px hsl(270 60% 50% / 0.3);
-    --shadow-gold: 0 5px 20px hsl(45 90% 65% / 0.4);
-    --glow-primary: 0 0 30px hsl(270 60% 50% / 0.5);
-    --glow-gold: 0 0 20px hsl(45 90% 65% / 0.6);
+    /* Clean Shadows & Effects */
+    --shadow-magical: 0 10px 40px hsl(120 60% 50% / 0.3);
+    --shadow-gold: 0 5px 20px hsl(120 60% 50% / 0.3);
+    --glow-primary: 0 0 30px hsl(120 60% 50% / 0.4);
+    --glow-gold: 0 0 20px hsl(120 60% 50% / 0.4);
 
     /* Smooth Alchemical Transitions */
     --transition-magical: all 0.4s cubic-bezier(0.4, 0, 0.2, 1);
@@ -74,33 +76,36 @@
   }
 
   .light {
-    --background: 45 50% 96%;
-    --foreground: 240 10% 10%;
+    --background: 0 0% 100%;
+    --foreground: 0 0% 20%;
 
     --card: 0 0% 100%;
-    --card-foreground: 240 10% 10%;
+    --card-foreground: 0 0% 20%;
 
     --popover: 0 0% 100%;
-    --popover-foreground: 240 10% 10%;
+    --popover-foreground: 0 0% 20%;
 
-    --primary: 270 60% 50%;
-    --primary-foreground: 45 100% 95%;
+    --primary: 120 60% 50%;
+    --primary-foreground: 0 0% 100%;
 
-    --secondary: 45 90% 65%;
-    --secondary-foreground: 240 100% 10%;
+    --secondary: 120 60% 40%;
+    --secondary-foreground: 0 0% 100%;
+    
+    --highlight: 180 100% 50%;
+    --highlight-foreground: 0 0% 100%;
 
-    --muted: 240 5% 90%;
-    --muted-foreground: 240 10% 40%;
+    --muted: 210 40% 96%;
+    --muted-foreground: 215.4 16.3% 46.9%;
 
-    --accent: 280 100% 70%;
-    --accent-foreground: 240 100% 5%;
+    --accent: 142 76% 36%;
+    --accent-foreground: 210 40% 98%;
 
     --destructive: 0 84.2% 60.2%;
-    --destructive-foreground: 45 100% 95%;
+    --destructive-foreground: 210 40% 98%;
 
-    --border: 240 15% 85%;
-    --input: 240 15% 90%;
-    --ring: 270 60% 50%;
+    --border: 214.3 31.8% 91.4%;
+    --input: 214.3 31.8% 91.4%;
+    --ring: 220 100% 50%;
     --sidebar-background: 240 5.9% 10%;
     --sidebar-foreground: 240 4.8% 95.9%;
     --sidebar-primary: 224.3 76.3% 48%;
@@ -157,12 +162,8 @@
     background: var(--gradient-potion);
   }
 
-  .gradient-green {
-    background: var(--gradient-green);
-  }
-
-  .gradient-cyan-gold {
-    background: var(--gradient-cyan-gold);
+  .gradient-highlight {
+    background: var(--gradient-highlight);
   }
 
   .shadow-magical {
