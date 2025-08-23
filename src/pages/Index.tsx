@@ -37,7 +37,7 @@ const Index = () => {
                   className="gradient-primary text-primary-foreground hover:shadow-magical transition-magical text-lg px-8 py-6"
                 >
                   <Link to="/devis" className="text-inherit">
-                    Demandez votre potion créative 🔮
+                    Demandez votre devis gratuitement 🔮
                   </Link>
                 </Button>
                 <Button 
@@ -188,7 +188,162 @@ const Index = () => {
         </div>
       </section>
 
-      {/* CTA Section */}
+      {/* Réalisations Section */}
+      <section className="py-20 px-4 bg-muted/20">
+        <div className="container mx-auto">
+          <div className="text-center mb-16">
+            <h2 className="text-3xl lg:text-4xl font-bold mb-4">
+              🔥 La preuve par la{" "}
+              <span className="gradient-primary bg-clip-text text-transparent">
+                créativité
+              </span>
+            </h2>
+            <p className="text-xl text-muted-foreground max-w-4xl mx-auto leading-relaxed mb-12">
+              Nous avons accompagné plusieurs entreprises dans leur transformation créative. 
+              Voici quelques-unes de nos réactions chimiques les plus réussies.
+            </p>
+          </div>
+          
+          <div className="grid lg:grid-cols-3 gap-8 mb-16">
+            <Card className="bg-card/50 border-border hover:shadow-magical transition-magical">
+              <CardContent className="p-8">
+                <div className="flex items-center space-x-3 mb-4">
+                  <div className="w-12 h-12 gradient-primary rounded-xl flex items-center justify-center">
+                    <span className="text-xl text-primary-foreground">🏢</span>
+                  </div>
+                  <div>
+                    <h3 className="font-bold text-lg">TechStart Africa</h3>
+                    <p className="text-sm text-muted-foreground">Technologie</p>
+                  </div>
+                </div>
+                
+                <blockquote className="text-muted-foreground mb-4 italic">
+                  "Grâce à SAUSH, nous avons doublé notre visibilité digitale en 3 mois."
+                </blockquote>
+                
+                <p className="font-medium text-sm mb-4">- Marie Kouassi, DG</p>
+                
+                <div className="space-y-3">
+                  <h4 className="font-semibold text-primary">Résultats obtenus :</h4>
+                  <div className="grid grid-cols-1 gap-2">
+                    <div className="flex items-center space-x-2">
+                      <span className="text-secondary">📈</span>
+                      <span className="text-sm font-medium">Visibilité +200%</span>
+                    </div>
+                    <div className="flex items-center space-x-2">
+                      <span className="text-secondary">📈</span>
+                      <span className="text-sm font-medium">Ventes +150%</span>
+                    </div>
+                    <div className="flex items-center space-x-2">
+                      <span className="text-secondary">📈</span>
+                      <span className="text-sm font-medium">Engagement +300%</span>
+                    </div>
+                  </div>
+                  
+                  <div className="pt-3">
+                    <p className="text-xs text-muted-foreground">Services utilisés :</p>
+                    <p className="text-sm text-accent">Identité complète • Stratégie digitale • Site web</p>
+                  </div>
+                </div>
+              </CardContent>
+            </Card>
+
+            <Card className="bg-card/50 border-border hover:shadow-magical transition-magical">
+              <CardContent className="p-8">
+                <div className="flex items-center space-x-3 mb-4">
+                  <div className="w-12 h-12 gradient-primary rounded-xl flex items-center justify-center">
+                    <span className="text-xl text-primary-foreground">🏢</span>
+                  </div>
+                  <div>
+                    <h3 className="font-bold text-lg">Cacao d'Or</h3>
+                    <p className="text-sm text-muted-foreground">Agroalimentaire</p>
+                  </div>
+                </div>
+                
+                <blockquote className="text-muted-foreground mb-4 italic">
+                  "L'équipe SAUSH a transformé notre image de marque. Nous sommes maintenant reconnus comme leaders sur notre marché."
+                </blockquote>
+                
+                <p className="font-medium text-sm mb-4">- Ibrahim Diallo, Fondateur</p>
+                
+                <div className="space-y-3">
+                  <h4 className="font-semibold text-primary">Résultats obtenus :</h4>
+                  <div className="grid grid-cols-1 gap-2">
+                    <div className="flex items-center space-x-2">
+                      <span className="text-secondary">📈</span>
+                      <span className="text-sm font-medium">Notoriété +400%</span>
+                    </div>
+                    <div className="flex items-center space-x-2">
+                      <span className="text-secondary">📈</span>
+                      <span className="text-sm font-medium">Export +250%</span>
+                    </div>
+                    <div className="flex items-center space-x-2">
+                      <span className="text-secondary">📈</span>
+                      <span className="text-sm font-medium">Partenaires +180%</span>
+                    </div>
+                  </div>
+                  
+                  <div className="pt-3">
+                    <p className="text-xs text-muted-foreground">Services utilisés :</p>
+                    <p className="text-sm text-accent">Rebranding • Relations presse • Campagne 360°</p>
+                  </div>
+                </div>
+              </CardContent>
+            </Card>
+
+            <Card className="bg-card/50 border-border hover:shadow-magical transition-magical">
+              <CardContent className="p-8">
+                <div className="flex items-center space-x-3 mb-4">
+                  <div className="w-12 h-12 gradient-primary rounded-xl flex items-center justify-center">
+                    <span className="text-xl text-primary-foreground">🏢</span>
+                  </div>
+                  <div>
+                    <h3 className="font-bold text-lg">École Digitale</h3>
+                    <p className="text-sm text-muted-foreground">Éducation</p>
+                  </div>
+                </div>
+                
+                <blockquote className="text-muted-foreground mb-4 italic">
+                  "Une communication créative qui nous a permis d'attirer 3x plus d'étudiants cette année."
+                </blockquote>
+                
+                <p className="font-medium text-sm mb-4">- Fatou Bamba, Directrice</p>
+                
+                <div className="space-y-3">
+                  <h4 className="font-semibold text-primary">Résultats obtenus :</h4>
+                  <div className="grid grid-cols-1 gap-2">
+                    <div className="flex items-center space-x-2">
+                      <span className="text-secondary">📈</span>
+                      <span className="text-sm font-medium">Inscriptions +300%</span>
+                    </div>
+                    <div className="flex items-center space-x-2">
+                      <span className="text-secondary">📈</span>
+                      <span className="text-sm font-medium">Trafic web +500%</span>
+                    </div>
+                    <div className="flex items-center space-x-2">
+                      <span className="text-secondary">📈</span>
+                      <span className="text-sm font-medium">Réseaux +600%</span>
+                    </div>
+                  </div>
+                  
+                  <div className="pt-3">
+                    <p className="text-xs text-muted-foreground">Services utilisés :</p>
+                    <p className="text-sm text-accent">Digital complet • Réseaux sociaux • Campagnes Ads</p>
+                  </div>
+                </div>
+              </CardContent>
+            </Card>
+          </div>
+
+          <div className="text-center">
+            <Link to="/realisations">
+              <Button className="gradient-primary text-primary-foreground hover:shadow-magical transition-magical text-lg px-8 py-6">
+                Voir toutes nos réalisations 🔥
+              </Button>
+            </Link>
+          </div>
+        </div>
+      </section>
       <section className="py-20 px-4">
         <div className="container mx-auto text-center">
           <div className="max-w-3xl mx-auto space-y-8">
@@ -204,14 +359,14 @@ const Index = () => {
               Parlons de votre projet et trouvons la potion parfaite.
             </p>
               <div className="flex flex-col sm:flex-row gap-4 justify-center">
-                <Link to="/devis">
-                  <Button 
-                    size="lg" 
-                    className="gradient-primary text-primary-foreground hover:shadow-magical transition-magical text-lg px-12 py-6"
-                  >
-                    Commencer l'alchimie 🔮
-                  </Button>
-                </Link>
+                  <Link to="/devis">
+                    <Button 
+                      size="lg" 
+                      className="gradient-primary text-primary-foreground hover:shadow-magical transition-magical text-lg px-12 py-6"
+                    >
+                      Demandez votre devis gratuitement 🔮
+                    </Button>
+                  </Link>
                 <Link to="/packs">
                   <Button 
                     variant="outline" 

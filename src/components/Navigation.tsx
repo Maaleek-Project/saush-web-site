@@ -35,7 +35,7 @@ const Navigation = () => {
             <div className="w-10 h-10 gradient-primary rounded-lg flex items-center justify-center">
               <span className="text-xl font-bold text-primary-foreground">S</span>
             </div>
-            <span className="text-xl font-bold gradient-gold bg-clip-text text-transparent">
+            <span className="text-xl font-bold text-secondary">
               SAUSH
             </span>
           </Link>
@@ -77,7 +77,7 @@ const Navigation = () => {
           <div className="hidden md:block">
             <Link to="/devis">
               <Button className="gradient-primary text-primary-foreground hover:shadow-magical transition-magical">
-                Demandez votre devis 🔮
+                Demandez votre devis gratuitement 🔮
               </Button>
             </Link>
           </div>
@@ -122,7 +122,7 @@ const Navigation = () => {
             <div className="pt-4">
               <Link to="/devis">
                 <Button className="w-full gradient-primary text-primary-foreground">
-                  Demandez votre devis 🔮
+                  Demandez votre devis gratuitement 🔮
                 </Button>
               </Link>
             </div>

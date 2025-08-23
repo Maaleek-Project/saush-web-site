@@ -141,19 +141,12 @@ const Diagnostic = () => {
               </div>
               
               <div className="flex flex-col sm:flex-row gap-4">
-                <Button 
-                  size="lg" 
-                  className="gradient-primary text-primary-foreground hover:shadow-magical transition-magical text-lg px-8 py-6"
-                >
-                  Faire mon diagnostic 🔍
-                </Button>
                 <Link to="/contact">
                   <Button 
-                    variant="outline" 
-                    size="lg"
-                    className="border-2 border-primary text-primary hover:bg-primary hover:text-primary-foreground transition-magical text-lg px-8 py-6"
+                    size="lg" 
+                    className="gradient-primary text-primary-foreground hover:shadow-magical transition-magical text-lg px-8 py-6"
                   >
-                    C'est gratuit ! Commencer maintenant
+                    C'est gratuit ! Commencer maintenant 🔍
                   </Button>
                 </Link>
               </div>

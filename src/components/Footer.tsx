@@ -87,6 +87,16 @@ const Footer = () => {
                   Carrière
                 </Link>
               </li>
+              <li>
+                <Link to="/contact" className="text-muted-foreground hover:text-secondary transition-colors">
+                  Contact
+                </Link>
+              </li>
+              <li>
+                <Link to="/devis" className="text-muted-foreground hover:text-secondary transition-colors">
+                  Devis gratuit
+                </Link>
+              </li>
             </ul>
           </div>
 
@@ -98,11 +108,11 @@ const Footer = () => {
                 <p className="text-primary-foreground font-medium">
                   Prêt à transformer votre communication ?
                 </p>
-                <Link to="/contact">
+                <Link to="/devis">
                   <Button 
                     className="w-full bg-secondary text-secondary-foreground hover:bg-secondary/90 transition-magical"
                   >
-                    Demander un devis 🔮
+                    Devis gratuit 🔮
                   </Button>
                 </Link>
               </CardContent>
