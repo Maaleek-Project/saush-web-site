@@ -16,9 +16,9 @@ const Index = () => {
         <div className="container mx-auto">
           <div className="grid lg:grid-cols-2 gap-12 items-center">
             <div className="space-y-8">
-              <h1 className="text-4xl lg:text-6xl font-bold leading-tight">
+              <h1 className="text-4xl lg:text-6xl font-bold leading-tight text-white">
                 ✨ Nous ne faisons pas de{" "}
-                <span className="gradient-gold bg-clip-text text-transparent">
+                <span className="gradient-highlight bg-clip-text text-transparent">
                   communication
                 </span>
                 . Nous créons des{" "}
@@ -120,9 +120,9 @@ const Index = () => {
         <div className="container mx-auto">
           <div className="grid lg:grid-cols-2 gap-12 items-center">
             <div className="space-y-6">
-              <h2 className="text-3xl lg:text-4xl font-bold">
+              <h2 className="text-3xl lg:text-4xl font-bold text-white">
                 🧪 Le laboratoire de la{" "}
-                <span className="gradient-primary bg-clip-text text-transparent">
+                <span className="gradient-highlight bg-clip-text text-transparent">
                   co-créativité
                 </span>
               </h2>
@@ -193,9 +193,9 @@ const Index = () => {
       <section className="py-20 px-4 bg-muted/20">
         <div className="container mx-auto">
           <div className="text-center mb-16">
-            <h2 className="text-3xl lg:text-4xl font-bold mb-4">
+            <h2 className="text-3xl lg:text-4xl font-bold mb-4 text-white">
               🔥 La preuve par la{" "}
-              <span className="gradient-primary bg-clip-text text-transparent">
+              <span className="gradient-highlight bg-clip-text text-transparent">
                 créativité
               </span>
             </h2>
@@ -348,9 +348,9 @@ const Index = () => {
       <section className="py-20 px-4">
         <div className="container mx-auto text-center">
           <div className="max-w-3xl mx-auto space-y-8">
-            <h2 className="text-3xl lg:text-5xl font-bold">
+            <h2 className="text-3xl lg:text-5xl font-bold text-white">
               Prêt à transformer votre{" "}
-              <span className="gradient-potion bg-clip-text text-transparent">
+              <span className="gradient-highlight bg-clip-text text-transparent">
                 communication
               </span>
               ?
