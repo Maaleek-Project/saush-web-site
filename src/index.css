@@ -41,6 +41,8 @@
     --gradient-gold: linear-gradient(135deg, hsl(45 90% 65%), hsl(35 100% 75%));
     --gradient-mystical: linear-gradient(180deg, hsl(240 10% 4%), hsl(270 40% 8%));
     --gradient-potion: linear-gradient(45deg, hsl(270 60% 50%), hsl(290 80% 60%), hsl(45 90% 65%));
+    --gradient-green: linear-gradient(135deg, hsl(142 76% 36%), hsl(142 76% 46%));
+    --gradient-cyan-gold: linear-gradient(90deg, hsl(180 100% 50%), hsl(45 90% 65%));
 
     /* Magical Shadows & Effects */
     --shadow-magical: 0 10px 40px hsl(270 60% 50% / 0.3);
@@ -153,6 +155,14 @@
 
   .gradient-potion {
     background: var(--gradient-potion);
+  }
+
+  .gradient-green {
+    background: var(--gradient-green);
+  }
+
+  .gradient-cyan-gold {
+    background: var(--gradient-cyan-gold);
   }
 
   .shadow-magical {

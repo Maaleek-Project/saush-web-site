@@ -17,7 +17,7 @@ const Index = () => {
             <div className="space-y-8">
               <h1 className="text-4xl lg:text-6xl font-bold leading-tight">
                 ✨ Nous ne faisons pas de{" "}
-                <span className="gradient-gold bg-clip-text text-transparent">
+                <span className="gradient-cyan-gold bg-clip-text text-transparent">
                   communication
                 </span>
                 . Nous créons des{" "}
@@ -28,7 +28,7 @@ const Index = () => {
               </h1>
               <p className="text-xl text-muted-foreground leading-relaxed">
                 Chez SAUSH, chaque projet devient une expérience alchimique unique. 
-                Nous mélangeons créativité, stratégie et digital pour transformer 
+                Nous mélangeons <span className="gradient-cyan-gold bg-clip-text text-transparent">créativité</span>, stratégie et digital pour transformer 
                 vos idées en résultats concrets.
               </p>
               <div className="flex flex-col sm:flex-row gap-4">
@@ -68,7 +68,7 @@ const Index = () => {
               L'alchimie qui transforme votre marque
             </h2>
             <p className="text-xl text-muted-foreground max-w-2xl mx-auto">
-              Trois ingrédients magiques pour une communication qui fait la différence
+              Trois ingrédients magiques pour une <span className="gradient-cyan-gold bg-clip-text text-transparent">communication</span> qui fait la différence
             </p>
           </div>
           
@@ -117,15 +117,15 @@ const Index = () => {
         <div className="container mx-auto">
           <div className="grid lg:grid-cols-2 gap-12 items-center">
             <div className="space-y-6">
-              <h2 className="text-3xl lg:text-4xl font-bold">
+               <h2 className="text-3xl lg:text-4xl font-bold text-white">
                 🧪 Le laboratoire de la{" "}
-                <span className="gradient-primary bg-clip-text text-transparent">
+                <span className="gradient-cyan-gold bg-clip-text text-transparent">
                   co-créativité
                 </span>
               </h2>
               <p className="text-lg text-muted-foreground leading-relaxed">
                 Chez SAUSH, nous croyons qu'une marque africaine forte ne se contente pas d'exister : 
-                elle doit marquer les esprits. Et pour y parvenir, une seule formule : la créativité, 
+                elle doit marquer les esprits. Et pour y parvenir, une seule formule : la <span className="gradient-cyan-gold bg-clip-text text-transparent">créativité</span>, 
                 sublimée par la technologie.
               </p>
               <div className="space-y-4">
@@ -139,7 +139,7 @@ const Index = () => {
                   <div className="w-8 h-8 gradient-primary rounded-lg flex items-center justify-center">
                     <span className="text-sm text-primary-foreground">✅</span>
                   </div>
-                  <p className="text-foreground">+5 ans d'expérience en communication créative</p>
+                  <p className="text-foreground">+5 ans d'expérience en <span className="gradient-cyan-gold bg-clip-text text-transparent">communication</span> créative</p>
                 </div>
                 <div className="flex items-center space-x-3">
                   <div className="w-8 h-8 gradient-primary rounded-lg flex items-center justify-center">
@@ -166,7 +166,7 @@ const Index = () => {
                 <h3 className="text-2xl font-bold mb-4">Notre ADN</h3>
                 <div className="space-y-4">
                   <div className="flex items-center justify-between">
-                    <span className="font-medium">⚗️ Créativité Chimique</span>
+                    <span className="font-medium">⚗️ <span className="gradient-cyan-gold bg-clip-text text-transparent">Créativité</span> Chimique</span>
                     <span className="text-xl font-bold">50%</span>
                   </div>
                   <div className="w-full bg-primary-foreground/20 rounded-full h-2">
@@ -190,9 +190,9 @@ const Index = () => {
       <section className="py-20 px-4">
         <div className="container mx-auto text-center">
           <div className="max-w-3xl mx-auto space-y-8">
-            <h2 className="text-3xl lg:text-5xl font-bold">
+            <h2 className="text-3xl lg:text-5xl font-bold text-white">
               Prêt à transformer votre{" "}
-              <span className="gradient-potion bg-clip-text text-transparent">
+              <span className="gradient-cyan-gold bg-clip-text text-transparent">
                 communication
               </span>
               ?
