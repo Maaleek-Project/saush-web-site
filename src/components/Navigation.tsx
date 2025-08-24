@@ -20,8 +20,8 @@ const Navigation = () => {
   ];
 
 
-  { /* name: "Devis gratuit", path: "/devis" */ },
-  { /*  name: "Carrière", path: "/carriere" */ },
+  { /* name: "Devis gratuit", path: "/devis" */ }
+  { /*  name: "Carrière", path: "/carriere" */ }
 
   const potionItems = [
     { name: "🔮 Identité", path: "/potions/identite" },
