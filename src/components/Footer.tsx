@@ -81,12 +81,12 @@ const Footer = () => {
               <li>
                 <Link to="/blog" className="text-muted-foreground hover:text-secondary transition-colors">
                   Blog / Labo créatif
-                </Link>
+                </Link> 
               </li>
               <li>
-                <Link to="/carriere" className="text-muted-foreground hover:text-secondary transition-colors">
+               { /* <Link to="/carriere" className="text-muted-foreground hover:text-secondary transition-colors">
                   Carrière
-                </Link>
+                </Link> */ }
               </li>
               <li>
                 <Link to="/contact" className="text-muted-foreground hover:text-secondary transition-colors">
@@ -94,11 +94,11 @@ const Footer = () => {
                 </Link>
               </li>
               <li>
-                <DevisModal>
+                { /* <DevisModal>
                   <button className="text-muted-foreground hover:text-secondary transition-colors text-left">
                     Devis gratuit
                   </button>
-                </DevisModal>
+                </DevisModal>  */}
               </li>
             </ul>
           </div>
@@ -129,7 +129,7 @@ const Footer = () => {
             {/* Copyright */}
             <div className="flex items-center space-x-4">
               <p className="text-muted-foreground text-sm">
-                © 2024 SAUSH. Tous droits réservés.
+                © 2025 SAUSH. Tous droits réservés.
               </p>
             </div>
 
