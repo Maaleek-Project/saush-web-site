@@ -16,10 +16,12 @@ const Navigation = () => {
     { name: "Nos Packs", path: "/packs" },
     { name: "Réalisations", path: "/realisations" },
     { name: "Blog", path: "/blog" },
-    { name: "Carrière", path: "/carriere" },
     { name: "Contact", path: "/contact" },
-    { name: "Devis gratuit", path: "/devis" },
   ];
+
+
+  { /* name: "Devis gratuit", path: "/devis" */ },
+  { /*  name: "Carrière", path: "/carriere" */ },
 
   const potionItems = [
     { name: "🔮 Identité", path: "/potions/identite" },
