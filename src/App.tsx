@@ -17,6 +17,10 @@ import Digital from "./pages/potions/Digital";
 import Diagnostic from "./pages/potions/Diagnostic";
 import NotFound from "./pages/NotFound";
 import Devis from "./pages/Devis";
+import MentionsLegales from "./pages/MentionsLegales";
+import CGU from "./pages/CGU";
+import CGS from "./pages/CGS";
+import PolitiqueConfidentialite from "./pages/PolitiqueConfidentialite";
 
 const queryClient = new QueryClient();
 
@@ -40,6 +44,10 @@ const App = () => (
           <Route path="/carriere" element={<Carriere />} />
           <Route path="/contact" element={<Contact />} />
           <Route path="/devis" element={<Devis />} />
+          <Route path="/mentions-legales" element={<MentionsLegales />} />
+          <Route path="/cgu" element={<CGU />} />
+          <Route path="/cgs" element={<CGS />} />
+          <Route path="/politique-confidentialite" element={<PolitiqueConfidentialite />} />
           {/* ADD ALL CUSTOM ROUTES ABOVE THE CATCH-ALL "*" ROUTE */}
           <Route path="*" element={<NotFound />} />
         </Routes>

@@ -141,12 +141,18 @@ const Footer = () => {
             </div>
 
             {/* Links */}
-            <div className="flex space-x-6 text-sm">
-              <Link to="/contact" className="text-muted-foreground hover:text-primary transition-colors">
+            <div className="flex flex-wrap justify-center md:justify-end gap-4 text-sm">
+              <Link to="/politique-confidentialite" className="text-muted-foreground hover:text-primary transition-colors">
                 Politique de confidentialité
               </Link>
-              <Link to="/contact" className="text-muted-foreground hover:text-primary transition-colors">
+              <Link to="/mentions-legales" className="text-muted-foreground hover:text-primary transition-colors">
                 Mentions légales
+              </Link>
+              <Link to="/cgu" className="text-muted-foreground hover:text-primary transition-colors">
+                CGU
+              </Link>
+              <Link to="/cgs" className="text-muted-foreground hover:text-primary transition-colors">
+                CGS
               </Link>
             </div>
           </div>
