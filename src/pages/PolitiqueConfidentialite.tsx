@@ -1,26 +1,18 @@
-import Navigation from "@/components/Navigation";
-import Footer from "@/components/Footer";
-import { Helmet } from "react-helmet";
+import Layout from "@/components/Layout";
 
 const PolitiqueConfidentialite = () => {
   return (
-    <>
-      <Helmet>
-        <title>Politique de Confidentialité - Saush Creative Alchemy</title>
-        <meta name="description" content="Politique de confidentialité et protection des données personnelles - Saush" />
-      </Helmet>
-      <div className="min-h-screen bg-background">
-        <Navigation />
+    <Layout title="Politique de Confidentialité" description="Politique de confidentialité et protection des données personnelles - Saush">
         
-        <main className="container mx-auto px-4 py-24">
+        <div className="container pt-36 pb-24 sm:pt-44">
           <div className="max-w-4xl mx-auto">
-            <h1 className="text-4xl md:text-5xl font-bold mb-8 text-foreground">
-              Politique de <span className="gradient-text">Confidentialité</span>
+            <h1 className="display-lg mb-14 text-ink">
+              Politique de <span className="serif-accent text-lime-deep">Confidentialité</span>
             </h1>
 
-            <div className="space-y-8 text-foreground/90">
+            <div className="space-y-12 leading-relaxed text-ink/80">
               <section className="space-y-4">
-                <h2 className="text-2xl font-semibold text-foreground">Introduction</h2>
+                <h2 className="font-display text-2xl font-semibold text-ink">Introduction</h2>
                 <p>
                   SAUSH SARL accorde une grande importance à la protection de vos données personnelles. Cette politique de 
                   confidentialité a pour objectif de vous informer sur les modalités de collecte, d'utilisation et de protection 
@@ -29,23 +21,23 @@ const PolitiqueConfidentialite = () => {
               </section>
 
               <section className="space-y-4">
-                <h2 className="text-2xl font-semibold text-foreground">1. Responsable du traitement</h2>
-                <div className="bg-muted/30 p-6 rounded-lg space-y-2">
+                <h2 className="font-display text-2xl font-semibold text-ink">1. Responsable du traitement</h2>
+                <div className="space-y-2 rounded-2xl border border-ink/10 bg-white p-6">
                   <p><strong>SAUSH SARL</strong></p>
                   <p><strong>Siège social :</strong> Cocody Riviera Palmeraie – Abidjan, Côte d'Ivoire</p>
                   <p><strong>RCCM :</strong> CI-ABJ-03-2018-B12-00825</p>
-                  <p><strong>Email :</strong> <a href="mailto:dpo@saush.ci" className="text-primary hover:underline">dpo@saush.ci</a></p>
+                  <p><strong>Email :</strong> <a href="mailto:dpo@saush.ci" className="font-medium text-lime-deep underline underline-offset-2 hover:text-ink">dpo@saush.ci</a></p>
                   <p><strong>Téléphone :</strong> +225 05 06 09 96 54 / 07 57 21 79 67</p>
                 </div>
               </section>
 
               <section className="space-y-4">
-                <h2 className="text-2xl font-semibold text-foreground">2. Données collectées</h2>
+                <h2 className="font-display text-2xl font-semibold text-ink">2. Données collectées</h2>
                 <p>Dans le cadre de votre navigation sur notre site et de l'utilisation de nos services, nous sommes susceptibles de collecter :</p>
                 
                 <div className="space-y-4 ml-4">
                   <div>
-                    <h3 className="text-xl font-semibold text-foreground mb-2">Données d'identification</h3>
+                    <h3 className="mb-2 font-display text-xl font-semibold text-ink">Données d'identification</h3>
                     <ul className="list-disc list-inside space-y-2 ml-4">
                       <li>Nom et prénom</li>
                       <li>Adresse email</li>
@@ -56,7 +48,7 @@ const PolitiqueConfidentialite = () => {
                   </div>
 
                   <div>
-                    <h3 className="text-xl font-semibold text-foreground mb-2">Données de navigation</h3>
+                    <h3 className="mb-2 font-display text-xl font-semibold text-ink">Données de navigation</h3>
                     <ul className="list-disc list-inside space-y-2 ml-4">
                       <li>Adresse IP</li>
                       <li>Type de navigateur</li>
@@ -67,7 +59,7 @@ const PolitiqueConfidentialite = () => {
                   </div>
 
                   <div>
-                    <h3 className="text-xl font-semibold text-foreground mb-2">Données relatives aux projets</h3>
+                    <h3 className="mb-2 font-display text-xl font-semibold text-ink">Données relatives aux projets</h3>
                     <ul className="list-disc list-inside space-y-2 ml-4">
                       <li>Informations sur votre projet</li>
                       <li>Brief et cahier des charges</li>
@@ -78,7 +70,7 @@ const PolitiqueConfidentialite = () => {
               </section>
 
               <section className="space-y-4">
-                <h2 className="text-2xl font-semibold text-foreground">3. Finalités du traitement</h2>
+                <h2 className="font-display text-2xl font-semibold text-ink">3. Finalités du traitement</h2>
                 <p>Vos données personnelles sont collectées et traitées pour les finalités suivantes :</p>
                 <ul className="list-disc list-inside space-y-2 ml-4">
                   <li>Répondre à vos demandes de contact et d'information</li>
@@ -92,7 +84,7 @@ const PolitiqueConfidentialite = () => {
               </section>
 
               <section className="space-y-4">
-                <h2 className="text-2xl font-semibold text-foreground">4. Base légale du traitement</h2>
+                <h2 className="font-display text-2xl font-semibold text-ink">4. Base légale du traitement</h2>
                 <p>Le traitement de vos données personnelles repose sur :</p>
                 <ul className="list-disc list-inside space-y-2 ml-4">
                   <li><strong>L'exécution d'un contrat :</strong> pour la gestion de la relation commerciale et l'exécution des prestations</li>
@@ -103,7 +95,7 @@ const PolitiqueConfidentialite = () => {
               </section>
 
               <section className="space-y-4">
-                <h2 className="text-2xl font-semibold text-foreground">5. Durée de conservation</h2>
+                <h2 className="font-display text-2xl font-semibold text-ink">5. Durée de conservation</h2>
                 <p>Vos données personnelles sont conservées pour une durée qui n'excède pas celle nécessaire aux finalités pour lesquelles elles sont traitées :</p>
                 <ul className="list-disc list-inside space-y-2 ml-4">
                   <li><strong>Données clients :</strong> pendant la durée de la relation commerciale et 5 ans après la fin de celle-ci</li>
@@ -114,7 +106,7 @@ const PolitiqueConfidentialite = () => {
               </section>
 
               <section className="space-y-4">
-                <h2 className="text-2xl font-semibold text-foreground">6. Sécurité des données</h2>
+                <h2 className="font-display text-2xl font-semibold text-ink">6. Sécurité des données</h2>
                 <p>
                   SAUSH SARL met en œuvre toutes les mesures techniques et organisationnelles appropriées pour assurer la sécurité 
                   et la confidentialité de vos données personnelles, notamment pour empêcher qu'elles soient déformées, endommagées 
@@ -124,7 +116,7 @@ const PolitiqueConfidentialite = () => {
               </section>
 
               <section className="space-y-4">
-                <h2 className="text-2xl font-semibold text-foreground">7. Partage des données</h2>
+                <h2 className="font-display text-2xl font-semibold text-ink">7. Partage des données</h2>
                 <p>
                   Vos données personnelles ne sont jamais vendues à des tiers. Elles peuvent être partagées uniquement avec :
                 </p>
@@ -136,7 +128,7 @@ const PolitiqueConfidentialite = () => {
               </section>
 
               <section className="space-y-4">
-                <h2 className="text-2xl font-semibold text-foreground">8. Vos droits</h2>
+                <h2 className="font-display text-2xl font-semibold text-ink">8. Vos droits</h2>
                 <p>Conformément à la réglementation applicable (loi ivoirienne ARTCI / RGPD), vous disposez des droits suivants :</p>
                 <ul className="list-disc list-inside space-y-2 ml-4">
                   <li><strong>Droit d'accès :</strong> obtenir la confirmation que des données vous concernant sont traitées et en obtenir une copie</li>
@@ -149,12 +141,12 @@ const PolitiqueConfidentialite = () => {
                 </ul>
                 <p className="mt-4">
                   Pour exercer vos droits, vous pouvez nous écrire à : 
-                  <a href="mailto:dpo@saush.ci" className="text-primary hover:underline ml-2">dpo@saush.ci</a>
+                  <a href="mailto:dpo@saush.ci" className="font-medium text-lime-deep underline underline-offset-2 hover:text-ink ml-2">dpo@saush.ci</a>
                 </p>
               </section>
 
               <section className="space-y-4">
-                <h2 className="text-2xl font-semibold text-foreground">9. Cookies</h2>
+                <h2 className="font-display text-2xl font-semibold text-ink">9. Cookies</h2>
                 <p>
                   Notre site utilise des cookies pour améliorer votre expérience de navigation et analyser l'utilisation du site. 
                   Vous pouvez à tout moment gérer vos préférences en matière de cookies via les paramètres de votre navigateur.
@@ -162,7 +154,7 @@ const PolitiqueConfidentialite = () => {
               </section>
 
               <section className="space-y-4">
-                <h2 className="text-2xl font-semibold text-foreground">10. Modifications</h2>
+                <h2 className="font-display text-2xl font-semibold text-ink">10. Modifications</h2>
                 <p>
                   SAUSH SARL se réserve le droit de modifier la présente politique de confidentialité à tout moment. 
                   Toute modification sera publiée sur cette page avec indication de la date de mise à jour.
@@ -170,26 +162,24 @@ const PolitiqueConfidentialite = () => {
               </section>
 
               <section className="space-y-4">
-                <h2 className="text-2xl font-semibold text-foreground">11. Contact</h2>
+                <h2 className="font-display text-2xl font-semibold text-ink">11. Contact</h2>
                 <p>Pour toute question relative à cette politique de confidentialité ou à la protection de vos données, contactez-nous :</p>
-                <div className="bg-muted/30 p-6 rounded-lg space-y-2">
-                  <p><strong>Email DPO :</strong> <a href="mailto:dpo@saush.ci" className="text-primary hover:underline">dpo@saush.ci</a></p>
-                  <p><strong>Email général :</strong> <a href="mailto:contact@saush.ci" className="text-primary hover:underline">contact@saush.ci</a></p>
+                <div className="space-y-2 rounded-2xl border border-ink/10 bg-white p-6">
+                  <p><strong>Email DPO :</strong> <a href="mailto:dpo@saush.ci" className="font-medium text-lime-deep underline underline-offset-2 hover:text-ink">dpo@saush.ci</a></p>
+                  <p><strong>Email général :</strong> <a href="mailto:contact@saush.ci" className="font-medium text-lime-deep underline underline-offset-2 hover:text-ink">contact@saush.ci</a></p>
                   <p><strong>Adresse :</strong> Cocody Riviera Palmeraie, Abidjan, Côte d'Ivoire</p>
                   <p><strong>Téléphone :</strong> +225 05 06 09 96 54 / 07 57 21 79 67</p>
                 </div>
               </section>
 
-              <p className="text-sm text-muted-foreground mt-8">
+              <p className="mt-8 text-sm text-ink-muted">
                 Dernière mise à jour : {new Date().toLocaleDateString('fr-FR')}
               </p>
             </div>
           </div>
-        </main>
+        </div>
 
-        <Footer />
-      </div>
-    </>
+        </Layout>
   );
 };
 

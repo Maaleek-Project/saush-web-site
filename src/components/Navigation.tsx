@@ -1,131 +1,154 @@
-import { useState } from "react";
-import { Link, useLocation } from "react-router-dom";
-import { Button } from "@/components/ui/button";
-import { Menu, X } from "lucide-react";
+import { useEffect, useState } from "react";
+import { Link, NavLink, useLocation } from "react-router-dom";
+import { ArrowUpRight, ChevronDown, Menu, X } from "lucide-react";
 import DevisModal from "@/components/DevisModal";
 import logoSaush from "@/assets/logo-saush.png";
+import { potions } from "@/data/site";
+import { cn } from "@/lib/utils";
 
-const Navigation = () => {
-  const [isOpen, setIsOpen] = useState(false);
-  const location = useLocation();
+const navItems = [
+  { name: "Agence", path: "/about" },
+  { name: "Potions", path: "/potions", dropdown: true },
+  { name: "Packs", path: "/packs" },
+  { name: "Réalisations", path: "/realisations" },
+  { name: "Le Labo", path: "/blog" },
+  { name: "Contact", path: "/contact" },
+];
 
-  const navItems = [
-    { name: "Accueil", path: "/" },
-    { name: "À propos", path: "/about" },
-    { name: "Nos Potions", path: "/potions", hasDropdown: true },
-    { name: "Nos Packs", path: "/packs" },
-    { name: "Réalisations", path: "/realisations" },
-    { name: "Blog", path: "/blog" },
-    { name: "Contact", path: "/contact" }
-  ];
+const Navigation = ({ darkHero = false }: { darkHero?: boolean }) => {
+  const [open, setOpen] = useState(false);
+  const [scrolled, setScrolled] = useState(false);
+  const { pathname } = useLocation();
 
+  useEffect(() => {
+    const onScroll = () => setScrolled(window.scrollY > 24);
+    onScroll();
+    window.addEventListener("scroll", onScroll, { passive: true });
+    return () => window.removeEventListener("scroll", onScroll);
+  }, []);
 
-  const potionItems = [
-    { name: "🔮 Identité", path: "/potions/identite" },
-    { name: "🔮 Stratégie", path: "/potions/strategie" },
-    { name: "🔮 Digital", path: "/potions/digital" },
-    { name: "🔮 Diagnostic", path: "/potions/diagnostic" },
-  ];
+  useEffect(() => setOpen(false), [pathname]);
+
+  useEffect(() => {
+    document.body.style.overflow = open ? "hidden" : "";
+    return () => {
+      document.body.style.overflow = "";
+    };
+  }, [open]);
+
+  // Texte clair tant qu'on est en haut d'une page à hero sombre
+  const light = darkHero && !scrolled && !open;
 
   return (
-    <nav className="fixed top-0 w-full z-50 bg-background/95 backdrop-blur-md border-b border-border">
-      <div className="container mx-auto px-4">
-        <div className="flex items-center justify-between h-16">
-          {/* Logo */}
-          <Link to="/" className="flex items-center space-x-2">
-            <img src={logoSaush} alt="SAUSH" className="h-12 w-auto" />
-          </Link>
+    <header
+      className={cn(
+        "fixed inset-x-0 top-0 z-50 transition-all duration-500",
+        scrolled || open ? "bg-paper/90 backdrop-blur-xl border-b border-ink/10" : "bg-transparent border-b border-transparent",
+      )}
+    >
+      <div className="container flex h-[72px] items-center justify-between gap-6">
+        <Link to="/" className="flex shrink-0 items-center" aria-label="SAUSH — Accueil">
+          <img src={logoSaush} alt="SAUSH" className="h-10 w-auto" />
+        </Link>
 
-          {/* Desktop Navigation */}
-          <div className="hidden md:flex items-center space-x-8">
-            {navItems.map((item) => (
-              <div key={item.name} className="relative group">
-                <Link
-                  to={item.path}
-                  className={`text-sm font-medium transition-magical hover:text-primary ${
-                    location.pathname === item.path
-                      ? "text-primary"
-                      : "text-muted-foreground"
-                  }`}
-                >
-                  {item.name}
-                </Link>
-                {item.hasDropdown && (
-                  <div className="absolute top-full left-0 mt-2 w-48 bg-card border border-border rounded-lg shadow-magical opacity-0 invisible group-hover:opacity-100 group-hover:visible transition-magical">
-                    <div className="py-2">
-                      {potionItems.map((potion) => (
-                        <Link
-                          key={potion.name}
-                          to={potion.path}
-                          className="block px-4 py-2 text-sm text-card-foreground hover:bg-muted transition-magical"
-                        >
-                          {potion.name}
-                        </Link>
-                      ))}
-                    </div>
+        <nav className="hidden items-center gap-1 lg:flex" aria-label="Navigation principale">
+          {navItems.map((item) => (
+            <div key={item.path} className="group relative">
+              <NavLink
+                to={item.path}
+                className={({ isActive }) =>
+                  cn(
+                    "flex items-center gap-1 rounded-full px-4 py-2 text-[0.92rem] font-medium transition-colors",
+                    light ? "text-paper/80 hover:text-paper" : "text-ink/70 hover:text-ink",
+                    isActive && (light ? "text-paper" : "text-ink"),
+                  )
+                }
+              >
+                {item.name}
+                {item.dropdown && <ChevronDown className="h-3.5 w-3.5 transition-transform group-hover:rotate-180" />}
+              </NavLink>
+
+              {item.dropdown && (
+                <div className="invisible absolute left-1/2 top-full w-[420px] -translate-x-1/2 pt-3 opacity-0 transition-all duration-300 group-hover:visible group-hover:opacity-100 group-focus-within:visible group-focus-within:opacity-100">
+                  <div className="rounded-2xl border border-ink/10 bg-paper p-2 shadow-[0_24px_60px_-20px_hsl(var(--ink)/0.35)]">
+                    {potions.map((p) => (
+                      <Link
+                        key={p.slug}
+                        to={`/potions/${p.slug}`}
+                        className="flex items-start gap-4 rounded-xl p-3 transition-colors hover:bg-paper-deep"
+                      >
+                        <span className="mt-0.5 font-display text-sm font-semibold text-lime-deep">{p.number}</span>
+                        <span>
+                          <span className="block font-display font-semibold text-ink">Potion {p.name}</span>
+                          <span className="block text-sm text-ink-muted">{p.short}</span>
+                        </span>
+                      </Link>
+                    ))}
                   </div>
-                )}
-              </div>
-            ))}
-          </div>
+                </div>
+              )}
+            </div>
+          ))}
+        </nav>
 
-          {/* CTA Button */}
-          <div className="hidden md:block">
-            <DevisModal>
-              <Button className="gradient-primary text-primary-foreground hover:shadow-magical transition-magical">
-                Demandez votre devis gratuitement 🔮
-              </Button>
-            </DevisModal>
-          </div>
-
-          {/* Mobile menu button */}
-          <button
-            className="md:hidden p-2"
-            onClick={() => setIsOpen(!isOpen)}
-          >
-            {isOpen ? <X size={24} /> : <Menu size={24} />}
-          </button>
+        <div className="hidden lg:block">
+          <DevisModal>
+            <button className={cn("btn btn-sm", light ? "btn-lime" : "btn-ink")}>
+              Devis gratuit <ArrowUpRight className="h-4 w-4" />
+            </button>
+          </DevisModal>
         </div>
 
-        {/* Mobile Navigation */}
-        {isOpen && (
-          <div className="md:hidden py-4 border-t border-border">
+        <button
+          className={cn(
+            "flex h-11 w-11 items-center justify-center rounded-full lg:hidden",
+            light ? "text-paper" : "text-ink",
+          )}
+          onClick={() => setOpen((v) => !v)}
+          aria-label={open ? "Fermer le menu" : "Ouvrir le menu"}
+          aria-expanded={open}
+        >
+          {open ? <X className="h-6 w-6" /> : <Menu className="h-6 w-6" />}
+        </button>
+      </div>
+
+      {/* Menu mobile */}
+      {open && (
+        <div className="h-[calc(100dvh-72px)] overflow-y-auto border-t border-ink/10 bg-paper lg:hidden">
+          <div className="container flex flex-col gap-1 py-6">
+            <Link to="/" className="py-3 font-display text-3xl font-semibold text-ink">Accueil</Link>
             {navItems.map((item) => (
-              <div key={item.name}>
-                <Link
-                  to={item.path}
-                  className="block py-2 text-sm font-medium text-muted-foreground hover:text-primary transition-magical"
-                  onClick={() => setIsOpen(false)}
-                >
+              <div key={item.path}>
+                <Link to={item.path} className="block py-3 font-display text-3xl font-semibold text-ink">
                   {item.name}
                 </Link>
-                {item.hasDropdown && (
-                  <div className="pl-4">
-                    {potionItems.map((potion) => (
+                {item.dropdown && (
+                  <div className="mb-2 grid grid-cols-2 gap-2">
+                    {potions.map((p) => (
                       <Link
-                        key={potion.name}
-                        to={potion.path}
-                        className="block py-1 text-sm text-muted-foreground hover:text-primary transition-magical"
-                        onClick={() => setIsOpen(false)}
+                        key={p.slug}
+                        to={`/potions/${p.slug}`}
+                        className="rounded-xl bg-paper-deep px-4 py-3 text-sm font-medium text-ink"
                       >
-                        {potion.name}
+                        <span className="mr-2 text-lime-deep">{p.number}</span>
+                        {p.name}
                       </Link>
                     ))}
                   </div>
                 )}
               </div>
             ))}
-            <div className="pt-4">
+            <div className="mt-6">
               <DevisModal>
-                <Button className="w-full gradient-primary text-primary-foreground">
-                  Demandez votre devis gratuitement 🔮
-                </Button>
+                <button className="btn btn-ink w-full">
+                  Demander un devis gratuit <ArrowUpRight className="h-4 w-4" />
+                </button>
               </DevisModal>
             </div>
           </div>
-        )}
-      </div>
-    </nav>
+        </div>
+      )}
+    </header>
   );
 };
 

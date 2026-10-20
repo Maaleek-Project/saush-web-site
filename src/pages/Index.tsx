@@ -1,389 +1,316 @@
-import Navigation from "@/components/Navigation";
-import Footer from "@/components/Footer";
-import { Button } from "@/components/ui/button";
-import { Card, CardContent } from "@/components/ui/card";
 import { Link } from "react-router-dom";
-import heroImage from "@/assets/hero-laboratory.jpg";
+import { ArrowUpRight, ArrowDown } from "lucide-react";
+import Layout from "@/components/Layout";
 import DevisModal from "@/components/DevisModal";
+import Reveal from "@/components/site/Reveal";
+import { ArrowLink, CtaBand, SectionHeader } from "@/components/site/blocks";
+import { brandPacks, cases, company, expertises, images, method, potions, stats } from "@/data/site";
+import abidjan from "@/assets/photos/abidjan.jpg";
+import { cn } from "@/lib/utils";
 
 const Index = () => {
   return (
-    <div className="min-h-screen animated-bg">
-      <Navigation />
-      
-      {/* Hero Section */}
-      <section className="pt-20 pb-20 px-4">
-        <div className="container mx-auto">
-          <div className="grid lg:grid-cols-2 gap-12 items-center">
-            <div className="space-y-8">
-              <h1 className="text-4xl lg:text-6xl font-bold leading-tight text-white">
-                ✨ Nous ne faisons pas de{" "}
-                <span className="gradient-highlight bg-clip-text text-transparent">
-                  communication
-                </span>
-                . Nous créons des{" "}
-                <span className="gradient-primary bg-clip-text text-transparent">
-                  émotions qui marquent
-                </span>
-                .
+    <Layout darkHero description="SAUSH, laboratoire de co-créativité à Abidjan : identité de marque, stratégie de communication, digital et diagnostic pour les marques africaines ambitieuses.">
+      {/* ───────── Hero ───────── */}
+      <section className="grain relative overflow-hidden bg-ink text-paper">
+        <div className="pointer-events-none absolute -right-40 -top-40 h-[560px] w-[560px] rounded-full bg-lime-bright/20 blur-[140px]" />
+        <div className="pointer-events-none absolute -bottom-52 -left-32 h-[420px] w-[420px] rounded-full bg-clay/20 blur-[140px]" />
+
+        <div className="container relative grid gap-14 pt-36 pb-20 sm:pt-44 lg:grid-cols-12 lg:gap-10 lg:pb-28">
+          <div className="lg:col-span-7 lg:pt-6">
+            <Reveal>
+              <span className="eyebrow eyebrow-light">Agence créative · {company.city}</span>
+            </Reveal>
+            <Reveal delay={100}>
+              <h1 className="display-xl mt-8">
+                Des marques africaines qui{" "}
+                <span className="serif-accent text-lime-bright">marquent</span> les esprits.
               </h1>
-              <p className="text-xl text-muted-foreground leading-relaxed">
-                Chez SAUSH, chaque projet devient une expérience alchimique unique. 
-                Nous mélangeons créativité, stratégie et digital pour transformer 
-                vos idées en résultats concrets.
+            </Reveal>
+            <Reveal delay={200}>
+              <p className="mt-8 max-w-xl text-lg leading-relaxed text-paper/70 sm:text-xl">
+                SAUSH est un laboratoire de co-créativité. Nous mêlons stratégie, design et digital pour faire de votre
+                marque une évidence — auprès de vos clients, ici et ailleurs.
               </p>
-              <div className="flex flex-col sm:flex-row gap-4">
-                <DevisModal>
-                  <Button 
-                    size="lg" 
-                    className="gradient-primary text-primary-foreground hover:shadow-magical transition-magical text-lg px-8 py-6"
-                  >
-                    Demandez votre devis gratuitement 🔮
-                  </Button>
-                </DevisModal>
-                <Button 
-                  variant="outline" 
-                  size="lg"
-                  className="border-2 border-primary text-primary hover:bg-primary hover:text-primary-foreground transition-magical text-lg px-8 py-6"
-                >
-                  Découvrir nos potions
-                </Button>
-              </div>
-            </div>
-            <div className="relative">
-              <img 
-                src={heroImage} 
-                alt="Laboratoire créatif SAUSH" 
-                className="rounded-2xl shadow-magical float-animation"
+            </Reveal>
+            <Reveal delay={300} className="mt-10 flex flex-col gap-3 sm:flex-row">
+              <DevisModal>
+                <button className="btn btn-lime">
+                  Demander un devis gratuit <ArrowUpRight className="h-4 w-4" />
+                </button>
+              </DevisModal>
+              <Link to="/potions" className="btn btn-outline-light">
+                Découvrir nos potions
+              </Link>
+            </Reveal>
+          </div>
+
+          <Reveal delay={250} className="relative lg:col-span-5">
+            <div className="relative aspect-[4/5] overflow-hidden rounded-[2rem]">
+              <img
+                src={images.cocreation}
+                alt="Séance de co-création autour d'un ordinateur portable"
+                className="h-full w-full object-cover"
               />
-              <div className="absolute -top-6 -right-6 w-20 h-20 gradient-gold rounded-full pulse-glow opacity-70"></div>
-              <div className="absolute -bottom-6 -left-6 w-16 h-16 gradient-primary rounded-full pulse-glow opacity-50"></div>
+              <div className="absolute inset-0 bg-gradient-to-t from-ink/60 via-transparent to-transparent" />
             </div>
-          </div>
-        </div>
-      </section>
-
-      {/* Benefits Section */}
-      <section className="py-20 px-4">
-        <div className="container mx-auto">
-          <div className="text-center mb-16">
-            <h2 className="text-3xl lg:text-4xl font-bold mb-4">
-              L'alchimie qui transforme votre marque
-            </h2>
-            <p className="text-xl text-muted-foreground max-w-2xl mx-auto">
-              Trois ingrédients magiques pour une communication qui fait la différence
-            </p>
-          </div>
-          
-          <div className="grid md:grid-cols-3 gap-8">
-            <Card className="bg-card/50 border-border hover:shadow-magical transition-magical">
-              <CardContent className="p-8 text-center">
-                <div className="w-16 h-16 gradient-primary rounded-2xl flex items-center justify-center mx-auto mb-6">
-                  <span className="text-3xl">🚀</span>
-                </div>
-                <h3 className="text-2xl font-bold mb-4 text-primary">Plus de visibilité</h3>
-                <p className="text-muted-foreground">
-                  Faites-vous remarquer là où vos clients vous cherchent vraiment
-                </p>
-              </CardContent>
-            </Card>
-
-            <Card className="bg-card/50 border-border hover:shadow-magical transition-magical">
-              <CardContent className="p-8 text-center">
-                <div className="w-16 h-16 gradient-gold rounded-2xl flex items-center justify-center mx-auto mb-6">
-                  <span className="text-3xl">🎯</span>
-                </div>
-                <h3 className="text-2xl font-bold mb-4 text-secondary">Messages qui convertissent</h3>
-                <p className="text-muted-foreground">
-                  Transformez chaque interaction en opportunité de vente
-                </p>
-              </CardContent>
-            </Card>
-
-            <Card className="bg-card/50 border-border hover:shadow-magical transition-magical">
-              <CardContent className="p-8 text-center">
-                <div className="w-16 h-16 gradient-potion rounded-2xl flex items-center justify-center mx-auto mb-6">
-                  <span className="text-3xl">❤️</span>
-                </div>
-                <h3 className="text-2xl font-bold mb-4 text-accent">Une marque mémorable</h3>
-                <p className="text-muted-foreground">
-                  Créez une identité unique que vos clients n'oublieront jamais
-                </p>
-              </CardContent>
-            </Card>
-          </div>
-        </div>
-      </section>
-
-      {/* About Preview Section */}
-      <section className="py-20 px-4 bg-muted/20">
-        <div className="container mx-auto">
-          <div className="grid lg:grid-cols-2 gap-12 items-center">
-            <div className="space-y-6">
-              <h2 className="text-3xl lg:text-4xl font-bold text-white">
-                🧪 Le laboratoire de la{" "}
-                <span className="gradient-highlight bg-clip-text text-transparent">
-                  co-créativité
-                </span>
-              </h2>
-              <p className="text-lg text-muted-foreground leading-relaxed">
-                Chez SAUSH, nous croyons qu'une marque africaine forte ne se contente pas d'exister : 
-                elle doit marquer les esprits. Et pour y parvenir, une seule formule : la créativité, 
-                sublimée par la technologie.
+            <div className="absolute -bottom-6 left-4 right-4 rounded-2xl bg-paper p-5 text-ink shadow-2xl sm:-left-8 sm:right-auto sm:w-72">
+              <p className="font-display text-4xl font-semibold tracking-tight">
+                Depuis {company.founded}
               </p>
-              <div className="space-y-4">
-                <div className="flex items-center space-x-3">
-                  <div className="w-8 h-8 gradient-primary rounded-lg flex items-center justify-center">
-                    <span className="text-sm text-primary-foreground">✅</span>
+              <p className="mt-1 text-sm text-ink-muted">
+                aux côtés des entrepreneurs, PME et grandes marques de Côte d'Ivoire.
+              </p>
+            </div>
+          </Reveal>
+        </div>
+
+        <div className="container relative hidden pb-10 lg:block">
+          <a href="#manifeste" className="inline-flex items-center gap-2 text-sm text-paper/50 hover:text-paper">
+            <ArrowDown className="h-4 w-4" /> Défiler
+          </a>
+        </div>
+
+        {/* Bandeau d'expertises */}
+        <div className="relative border-t border-paper/10 py-6">
+          <div className="flex w-max animate-marquee gap-10 whitespace-nowrap">
+            {[...expertises, ...expertises].map((e, i) => (
+              <span key={i} className="flex items-center gap-10 font-display text-2xl font-medium text-paper/80 sm:text-3xl">
+                {e}
+                <span className="h-2 w-2 rounded-full bg-lime-bright" />
+              </span>
+            ))}
+          </div>
+        </div>
+      </section>
+
+      {/* ───────── Manifeste ───────── */}
+      <section id="manifeste" className="py-24 sm:py-36">
+        <div className="container">
+          <div className="grid gap-12 lg:grid-cols-12">
+            <Reveal className="lg:col-span-3">
+              <span className="eyebrow">Notre manifeste</span>
+            </Reveal>
+            <div className="lg:col-span-9">
+              <Reveal>
+                <p className="font-display text-3xl font-medium leading-[1.15] tracking-tight text-ink sm:text-5xl lg:text-[3.6rem]">
+                  Nous ne faisons pas de la communication.{" "}
+                  <span className="text-ink/35">
+                    Nous créons des <span className="serif-accent text-clay">émotions</span> qui marquent, et des marques qui durent.
+                  </span>
+                </p>
+              </Reveal>
+              <Reveal delay={150} className="mt-12 grid gap-8 border-t border-ink/10 pt-10 sm:grid-cols-2">
+                <p className="text-lg leading-relaxed text-ink-muted">
+                  Une marque africaine forte ne se contente pas d'exister : elle doit marquer les esprits. Pour y
+                  parvenir, notre formule est simple — la créativité, sublimée par la technologie.
+                </p>
+                <p className="text-lg leading-relaxed text-ink-muted">
+                  Chaque projet réunit une équipe dédiée de stratèges, designers, rédacteurs et experts digitaux. Et
+                  vous. Car les meilleures idées naissent toujours à plusieurs.
+                </p>
+              </Reveal>
+            </div>
+          </div>
+        </div>
+      </section>
+
+      {/* ───────── Potions ───────── */}
+      <section className="pb-24 sm:pb-36">
+        <div className="container">
+          <div className="flex flex-col justify-between gap-6 lg:flex-row lg:items-end">
+            <SectionHeader
+              className="mb-0"
+              eyebrow="Nos potions"
+              title={<>Quatre expertises, <span className="serif-accent">une seule alchimie.</span></>}
+              intro="Chaque potion réveille une facette de votre marque. Prises seules ou combinées, elles forment une communication cohérente de bout en bout."
+            />
+            <Reveal><ArrowLink to="/potions">Toutes nos potions</ArrowLink></Reveal>
+          </div>
+
+          <div className="mt-14 grid gap-5 md:grid-cols-2">
+            {potions.map((p, i) => (
+              <Reveal key={p.slug} delay={(i % 2) * 120}>
+                <Link
+                  to={`/potions/${p.slug}`}
+                  className="img-zoom group relative flex h-full min-h-[420px] flex-col justify-end overflow-hidden rounded-[1.75rem] bg-ink p-7 text-paper sm:p-9"
+                >
+                  <img src={p.image} alt="" className="absolute inset-0 h-full w-full object-cover opacity-55" loading="lazy" />
+                  <div className="absolute inset-0 bg-gradient-to-t from-ink via-ink/60 to-ink/10" />
+                  <div className="absolute inset-x-7 top-7 flex items-center justify-between sm:inset-x-9 sm:top-9">
+                    <span className="font-display text-sm font-semibold text-lime-bright">Potion {p.number}</span>
+                    <span className="flex h-11 w-11 items-center justify-center rounded-full border border-paper/25 transition-all group-hover:border-lime-bright group-hover:bg-lime-bright group-hover:text-ink">
+                      <ArrowUpRight className="h-5 w-5" />
+                    </span>
                   </div>
-                  <p className="text-foreground">Une équipe créative & digitale 100% dédiée</p>
-                </div>
-                <div className="flex items-center space-x-3">
-                  <div className="w-8 h-8 gradient-primary rounded-lg flex items-center justify-center">
-                    <span className="text-sm text-primary-foreground">✅</span>
+                  <div className="relative">
+                    <h3 className="font-display text-4xl font-semibold sm:text-5xl">{p.name}</h3>
+                    <p className="mt-2 font-serif text-2xl italic text-paper/90">{p.promise}</p>
+                    <p className="mt-4 max-w-md text-paper/65">{p.short}</p>
                   </div>
-                  <p className="text-foreground">+5 ans d'expérience en communication créative</p>
-                </div>
-                <div className="flex items-center space-x-3">
-                  <div className="w-8 h-8 gradient-primary rounded-lg flex items-center justify-center">
-                    <span className="text-sm text-primary-foreground">✅</span>
-                  </div>
-                  <p className="text-foreground">Des résultats mesurables et un suivi personnalisé</p>
-                </div>
+                </Link>
+              </Reveal>
+            ))}
+          </div>
+        </div>
+      </section>
+
+      {/* ───────── Méthode + ADN ───────── */}
+      <section className="grain bg-ink py-24 text-paper sm:py-36">
+        <div className="container">
+          <SectionHeader
+            light
+            eyebrow="Notre formule"
+            title={<>La co-créativité, <span className="serif-accent text-lime-bright">en quatre temps.</span></>}
+            intro="Pas de recette toute faite. Une méthode éprouvée qui vous place au centre, de la première écoute aux premiers résultats."
+          />
+          <div className="grid gap-px overflow-hidden rounded-[1.75rem] bg-paper/10 sm:grid-cols-2 lg:grid-cols-4">
+            {method.map((m, i) => (
+              <Reveal key={m.title} delay={i * 100} className="bg-ink p-8 sm:p-10">
+                <span className="font-display text-6xl font-semibold text-lime-bright/90">0{i + 1}</span>
+                <h3 className="mt-8 font-display text-2xl font-semibold">{m.title}</h3>
+                <p className="mt-3 leading-relaxed text-paper/60">{m.text}</p>
+              </Reveal>
+            ))}
+          </div>
+
+          {/* ADN 50/50 */}
+          <Reveal className="mt-20 grid items-center gap-10 lg:grid-cols-2">
+            <div>
+              <span className="eyebrow eyebrow-light">Notre ADN</span>
+              <h3 className="display-md mt-5">
+                Moitié <span className="serif-accent text-lime-bright">créativité</span>, moitié{" "}
+                <span className="serif-accent text-clay">technique</span>.
+              </h3>
+              <p className="mt-5 max-w-lg text-lg text-paper/60">
+                L'imagination sans méthode s'évapore. La technique sans émotion laisse indifférent. Nos projets réunissent
+                toujours les deux.
+              </p>
+            </div>
+            <div className="grid grid-cols-2 gap-3">
+              <div className="rounded-[1.5rem] bg-lime-bright p-7 text-ink">
+                <p className="font-display text-6xl font-semibold">50%</p>
+                <p className="mt-6 font-display text-xl font-semibold">Créativité</p>
+                <p className="mt-1 text-sm text-ink/70">Imagination, design, récit, émotion.</p>
               </div>
-              <div className="flex gap-4">
-                <Link to="/about">
-                  <Button className="gradient-gold text-secondary-foreground hover:shadow-gold transition-magical">
-                    Découvrir notre ADN ⚗️
-                  </Button>
-                </Link>
-                <Link to="/potions">
-                  <Button variant="outline" className="border-primary text-primary hover:bg-primary hover:text-primary-foreground transition-magical">
-                    Voir nos potions 🔮
-                  </Button>
-                </Link>
+              <div className="rounded-[1.5rem] bg-clay p-7 text-white">
+                <p className="font-display text-6xl font-semibold">50%</p>
+                <p className="mt-6 font-display text-xl font-semibold">Technique</p>
+                <p className="mt-1 text-sm text-white/80">Stratégie, digital, data, performance.</p>
               </div>
             </div>
-            <div className="space-y-6">
-              <Card className="bg-gradient-primary text-primary-foreground p-6">
-                <h3 className="text-2xl font-bold mb-4">Notre ADN</h3>
-                <div className="space-y-4">
-                  <div className="flex items-center justify-between">
-                    <span className="font-medium">⚗️ Créativité Chimique</span>
-                    <span className="text-xl font-bold">50%</span>
-                  </div>
-                  <div className="w-full bg-primary-foreground/20 rounded-full h-2">
-                    <div className="gradient-gold h-2 rounded-full w-1/2"></div>
-                  </div>
-                  <div className="flex items-center justify-between">
-                    <span className="font-medium">⚙️ Techniques Réactives</span>
-                    <span className="text-xl font-bold">50%</span>
-                  </div>
-                  <div className="w-full bg-primary-foreground/20 rounded-full h-2">
-                    <div className="gradient-gold h-2 rounded-full w-1/2"></div>
-                  </div>
-                </div>
-              </Card>
-            </div>
+          </Reveal>
+        </div>
+      </section>
+
+      {/* ───────── Chiffres ───────── */}
+      <section className="py-24 sm:py-32">
+        <div className="container">
+          <div className="grid grid-cols-2 gap-y-12 lg:grid-cols-4">
+            {stats.map((s, i) => (
+              <Reveal key={s.label} delay={i * 80} className={cn("px-2 sm:px-6", i > 0 && "lg:border-l lg:border-ink/10")}>
+                <p className="font-display text-6xl font-semibold tracking-tight text-ink sm:text-7xl">
+                  {s.value}
+                  <span className="text-lime-deep">{s.suffix}</span>
+                </p>
+                <p className="mt-3 text-ink-muted">{s.label}</p>
+              </Reveal>
+            ))}
           </div>
         </div>
       </section>
 
-      {/* Réalisations Section */}
-      <section className="py-20 px-4 bg-muted/20">
-        <div className="container mx-auto">
-          <div className="text-center mb-16">
-            <h2 className="text-3xl lg:text-4xl font-bold mb-4 text-white">
-              🔥 La preuve par la{" "}
-              <span className="gradient-highlight bg-clip-text text-transparent">
-                créativité
-              </span>
-            </h2>
-            <p className="text-xl text-muted-foreground max-w-4xl mx-auto leading-relaxed mb-12">
-              Nous avons accompagné plusieurs entreprises dans leur transformation créative. 
-              Voici quelques-unes de nos réactions chimiques les plus réussies.
-            </p>
-          </div>
-          
-          <div className="grid lg:grid-cols-3 gap-8 mb-16">
-            <Card className="bg-card/50 border-border hover:shadow-magical transition-magical">
-              <CardContent className="p-8">
-                <div className="flex items-center space-x-3 mb-4">
-                  <div className="w-12 h-12 gradient-primary rounded-xl flex items-center justify-center">
-                    <span className="text-xl text-primary-foreground">🏢</span>
-                  </div>
-                  <div>
-                    <h3 className="font-bold text-lg">TechStart Africa</h3>
-                    <p className="text-sm text-muted-foreground">Technologie</p>
-                  </div>
-                </div>
-                
-                <blockquote className="text-muted-foreground mb-4 italic">
-                  "Grâce à SAUSH, nous avons doublé notre visibilité digitale en 3 mois."
-                </blockquote>
-                
-                <p className="font-medium text-sm mb-4">- Marie Kouassi, DG</p>
-                
-                <div className="space-y-3">
-                  <h4 className="font-semibold text-primary">Résultats obtenus :</h4>
-                  <div className="grid grid-cols-1 gap-2">
-                    <div className="flex items-center space-x-2">
-                      <span className="text-secondary">📈</span>
-                      <span className="text-sm font-medium">Visibilité +200%</span>
-                    </div>
-                    <div className="flex items-center space-x-2">
-                      <span className="text-secondary">📈</span>
-                      <span className="text-sm font-medium">Ventes +150%</span>
-                    </div>
-                    <div className="flex items-center space-x-2">
-                      <span className="text-secondary">📈</span>
-                      <span className="text-sm font-medium">Engagement +300%</span>
-                    </div>
-                  </div>
-                  
-                  <div className="pt-3">
-                    <p className="text-xs text-muted-foreground">Services utilisés :</p>
-                    <p className="text-sm text-accent">Identité complète • Stratégie digitale • Site web</p>
-                  </div>
-                </div>
-              </CardContent>
-            </Card>
-
-            <Card className="bg-card/50 border-border hover:shadow-magical transition-magical">
-              <CardContent className="p-8">
-                <div className="flex items-center space-x-3 mb-4">
-                  <div className="w-12 h-12 gradient-primary rounded-xl flex items-center justify-center">
-                    <span className="text-xl text-primary-foreground">🏢</span>
-                  </div>
-                  <div>
-                    <h3 className="font-bold text-lg">Cacao d'Or</h3>
-                    <p className="text-sm text-muted-foreground">Agroalimentaire</p>
-                  </div>
-                </div>
-                
-                <blockquote className="text-muted-foreground mb-4 italic">
-                  "L'équipe SAUSH a transformé notre image de marque. Nous sommes maintenant reconnus comme leaders sur notre marché."
-                </blockquote>
-                
-                <p className="font-medium text-sm mb-4">- Ibrahim Diallo, Fondateur</p>
-                
-                <div className="space-y-3">
-                  <h4 className="font-semibold text-primary">Résultats obtenus :</h4>
-                  <div className="grid grid-cols-1 gap-2">
-                    <div className="flex items-center space-x-2">
-                      <span className="text-secondary">📈</span>
-                      <span className="text-sm font-medium">Notoriété +400%</span>
-                    </div>
-                    <div className="flex items-center space-x-2">
-                      <span className="text-secondary">📈</span>
-                      <span className="text-sm font-medium">Export +250%</span>
-                    </div>
-                    <div className="flex items-center space-x-2">
-                      <span className="text-secondary">📈</span>
-                      <span className="text-sm font-medium">Partenaires +180%</span>
-                    </div>
-                  </div>
-                  
-                  <div className="pt-3">
-                    <p className="text-xs text-muted-foreground">Services utilisés :</p>
-                    <p className="text-sm text-accent">Rebranding • Relations presse • Campagne 360°</p>
-                  </div>
-                </div>
-              </CardContent>
-            </Card>
-
-            <Card className="bg-card/50 border-border hover:shadow-magical transition-magical">
-              <CardContent className="p-8">
-                <div className="flex items-center space-x-3 mb-4">
-                  <div className="w-12 h-12 gradient-primary rounded-xl flex items-center justify-center">
-                    <span className="text-xl text-primary-foreground">🏢</span>
-                  </div>
-                  <div>
-                    <h3 className="font-bold text-lg">École Digitale</h3>
-                    <p className="text-sm text-muted-foreground">Éducation</p>
-                  </div>
-                </div>
-                
-                <blockquote className="text-muted-foreground mb-4 italic">
-                  "Une communication créative qui nous a permis d'attirer 3x plus d'étudiants cette année."
-                </blockquote>
-                
-                <p className="font-medium text-sm mb-4">- Fatou Bamba, Directrice</p>
-                
-                <div className="space-y-3">
-                  <h4 className="font-semibold text-primary">Résultats obtenus :</h4>
-                  <div className="grid grid-cols-1 gap-2">
-                    <div className="flex items-center space-x-2">
-                      <span className="text-secondary">📈</span>
-                      <span className="text-sm font-medium">Inscriptions +300%</span>
-                    </div>
-                    <div className="flex items-center space-x-2">
-                      <span className="text-secondary">📈</span>
-                      <span className="text-sm font-medium">Trafic web +500%</span>
-                    </div>
-                    <div className="flex items-center space-x-2">
-                      <span className="text-secondary">📈</span>
-                      <span className="text-sm font-medium">Réseaux +600%</span>
-                    </div>
-                  </div>
-                  
-                  <div className="pt-3">
-                    <p className="text-xs text-muted-foreground">Services utilisés :</p>
-                    <p className="text-sm text-accent">Digital complet • Réseaux sociaux • Campagnes Ads</p>
-                  </div>
-                </div>
-              </CardContent>
-            </Card>
+      {/* ───────── Réalisations ───────── */}
+      <section className="bg-paper-deep/60 py-24 sm:py-36">
+        <div className="container">
+          <div className="flex flex-col justify-between gap-6 lg:flex-row lg:items-end">
+            <SectionHeader
+              className="mb-0"
+              eyebrow="Réalisations"
+              title={<>La preuve par <span className="serif-accent">la créativité.</span></>}
+              intro="Quelques transformations récentes, menées main dans la main avec nos clients."
+            />
+            <Reveal><ArrowLink to="/realisations">Voir toutes les réalisations</ArrowLink></Reveal>
           </div>
 
-          <div className="text-center">
-            <Link to="/realisations">
-              <Button className="gradient-primary text-primary-foreground hover:shadow-magical transition-magical text-lg px-8 py-6">
-                Voir toutes nos réalisations 🔥
-              </Button>
-            </Link>
+          <div className="mt-14 grid gap-8 md:grid-cols-3">
+            {cases.slice(0, 3).map((c, i) => (
+              <Reveal key={c.slug} delay={i * 120}>
+                <article className="group">
+                  <div className="img-zoom aspect-[4/5] overflow-hidden rounded-[1.5rem]">
+                    <img src={c.image} alt="" className="h-full w-full object-cover" loading="lazy" />
+                  </div>
+                  <p className="mt-5 text-sm font-semibold uppercase tracking-[0.14em] text-lime-deep">{c.sector}</p>
+                  <h3 className="mt-2 font-display text-2xl font-semibold leading-snug text-ink">{c.title}</h3>
+                  <p className="mt-3 text-ink-muted">{c.outcome}</p>
+                </article>
+              </Reveal>
+            ))}
           </div>
         </div>
       </section>
-      <section className="py-20 px-4">
-        <div className="container mx-auto text-center">
-          <div className="max-w-3xl mx-auto space-y-8">
-            <h2 className="text-3xl lg:text-5xl font-bold text-white">
-              Prêt à transformer votre{" "}
-              <span className="gradient-highlight bg-clip-text text-transparent">
-                communication
-              </span>
-              ?
-            </h2>
-            <p className="text-xl text-muted-foreground">
-              Chaque grande marque commence par une première conversation. 
-              Parlons de votre projet et trouvons la potion parfaite.
-            </p>
-              <div className="flex flex-col sm:flex-row gap-4 justify-center">
-                <DevisModal>
-                  <Button 
-                    size="lg" 
-                    className="gradient-primary text-primary-foreground hover:shadow-magical transition-magical text-lg px-12 py-6"
-                  >
-                    Demandez votre devis gratuitement 🔮
-                  </Button>
-                </DevisModal>
-                <Link to="/packs">
-                  <Button 
-                    variant="outline" 
-                    size="lg"
-                    className="border-2 border-secondary text-secondary hover:bg-secondary hover:text-secondary-foreground transition-magical text-lg px-12 py-6"
-                  >
-                    Voir nos packs ⭐
-                  </Button>
+
+      {/* ───────── Packs ───────── */}
+      <section className="py-24 sm:py-36">
+        <div className="container grid gap-14 lg:grid-cols-12">
+          <div className="lg:col-span-5">
+            <SectionHeader
+              eyebrow="Packs"
+              title={<>Des formules claires, <span className="serif-accent">pour chaque étape.</span></>}
+              intro="Du lancement à la conquête de nouveaux marchés, nos packs regroupent l'essentiel à un prix lisible. Et tout reste ajustable."
+            />
+            <Reveal><ArrowLink to="/packs">Comparer les packs</ArrowLink></Reveal>
+          </div>
+          <div className="space-y-4 lg:col-span-7">
+            {brandPacks.map((p, i) => (
+              <Reveal key={p.name} delay={i * 100}>
+                <Link
+                  to="/packs"
+                  className={cn(
+                    "group flex flex-col gap-4 rounded-[1.5rem] border p-7 transition-all sm:flex-row sm:items-center sm:justify-between",
+                    p.highlight ? "border-ink bg-ink text-paper" : "border-ink/10 bg-white hover:border-ink/40",
+                  )}
+                >
+                  <div>
+                    <p className={cn("text-sm", p.highlight ? "text-lime-bright" : "text-lime-deep")}>{p.target}</p>
+                    <h3 className="mt-1 font-display text-3xl font-semibold">Pack {p.name}</h3>
+                  </div>
+                  <div className="flex items-center gap-5">
+                    <p className="font-display text-2xl font-semibold">
+                      {p.price} <span className={cn("text-sm font-normal", p.highlight ? "text-paper/60" : "text-ink-muted")}>FCFA</span>
+                    </p>
+                    <ArrowUpRight className="h-5 w-5 transition-transform group-hover:-translate-y-0.5 group-hover:translate-x-0.5" />
+                  </div>
                 </Link>
-              </div>
+              </Reveal>
+            ))}
           </div>
         </div>
       </section>
-      
-      <Footer />
-    </div>
+
+      {/* ───────── Ancrage ───────── */}
+      <section className="relative h-[70vh] min-h-[520px] max-h-[780px] overflow-hidden">
+        <img src={abidjan} alt="Vue aérienne d'Abidjan" className="absolute inset-0 h-full w-full object-cover object-[50%_65%]" loading="lazy" />
+        <div className="absolute inset-0 bg-gradient-to-t from-ink/95 via-ink/70 to-ink/40 sm:bg-gradient-to-r sm:from-ink/85 sm:via-ink/50 sm:to-transparent" />
+        <div className="container relative flex h-full items-center">
+          <Reveal className="max-w-xl text-paper">
+            <span className="eyebrow eyebrow-light">Made in Abidjan</span>
+            <h2 className="display-lg mt-6">
+              Ancrés en Côte d'Ivoire, <span className="serif-accent text-lime-bright">ouverts sur le monde.</span>
+            </h2>
+            <p className="mt-6 text-lg text-paper/75">
+              Nous connaissons intimement nos marchés, nos codes et nos publics. C'est ce qui nous permet de créer des
+              marques fières de leurs racines et prêtes à voyager.
+            </p>
+            <div className="mt-8">
+              <ArrowLink to="/about" light>Découvrir l'agence</ArrowLink>
+            </div>
+          </Reveal>
+        </div>
+      </section>
+
+      <CtaBand />
+    </Layout>
   );
 };
 

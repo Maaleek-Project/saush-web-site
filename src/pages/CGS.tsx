@@ -1,26 +1,18 @@
-import Navigation from "@/components/Navigation";
-import Footer from "@/components/Footer";
-import { Helmet } from "react-helmet";
+import Layout from "@/components/Layout";
 
 const CGS = () => {
   return (
-    <>
-      <Helmet>
-        <title>Conditions Générales de Services - Saush Creative Alchemy</title>
-        <meta name="description" content="Conditions générales de services de l'agence Saush" />
-      </Helmet>
-      <div className="min-h-screen bg-background">
-        <Navigation />
+    <Layout title="Conditions Générales de Services" description="Conditions générales de services de l'agence Saush">
         
-        <main className="container mx-auto px-4 py-24">
+        <div className="container pt-36 pb-24 sm:pt-44">
           <div className="max-w-4xl mx-auto">
-            <h1 className="text-4xl md:text-5xl font-bold mb-8 text-foreground">
-              Conditions Générales de <span className="gradient-text">Services</span>
+            <h1 className="display-lg mb-14 text-ink">
+              Conditions Générales de <span className="serif-accent text-lime-deep">Services</span>
             </h1>
 
-            <div className="space-y-8 text-foreground/90">
+            <div className="space-y-12 leading-relaxed text-ink/80">
               <section className="space-y-4">
-                <h2 className="text-2xl font-semibold text-foreground">Article 1 : Objet et champ d'application</h2>
+                <h2 className="font-display text-2xl font-semibold text-ink">Article 1 : Objet et champ d'application</h2>
                 <p>
                   Les présentes Conditions Générales de Services (CGS) régissent les relations contractuelles entre SAUSH SARL, 
                   société de communication, marketing et conseil digital, immatriculée au RCCM sous le n° CI-ABJ-03-2018-B12-00825, 
@@ -34,7 +26,7 @@ const CGS = () => {
               </section>
 
               <section className="space-y-4">
-                <h2 className="text-2xl font-semibold text-foreground">Article 2 : Prestations de services</h2>
+                <h2 className="font-display text-2xl font-semibold text-ink">Article 2 : Prestations de services</h2>
                 <p>SAUSH SARL propose un ensemble de services digitaux incluant, de manière non exhaustive :</p>
                 <ul className="list-disc list-inside space-y-2 ml-4">
                   <li>Stratégie de communication et marketing digital</li>
@@ -52,7 +44,7 @@ const CGS = () => {
               </section>
 
               <section className="space-y-4">
-                <h2 className="text-2xl font-semibold text-foreground">Article 3 : Commande et démarrage</h2>
+                <h2 className="font-display text-2xl font-semibold text-ink">Article 3 : Commande et démarrage</h2>
                 <p>
                   La commande devient ferme et définitive après la signature par le Client du devis ou de la proposition commerciale, 
                   accompagnée du versement de l'acompte prévu. Tout démarrage de prestation sans signature formelle vaut acceptation 
@@ -65,11 +57,11 @@ const CGS = () => {
               </section>
 
               <section className="space-y-4">
-                <h2 className="text-2xl font-semibold text-foreground">Article 4 : Conditions financières</h2>
+                <h2 className="font-display text-2xl font-semibold text-ink">Article 4 : Conditions financières</h2>
                 
                 <div className="space-y-6">
                   <div>
-                    <h3 className="text-xl font-semibold text-foreground mb-2">4.1. Tarifs</h3>
+                    <h3 className="mb-2 font-display text-xl font-semibold text-ink">4.1. Tarifs</h3>
                     <p>
                       Les prix sont indiqués en Francs CFA (FCFA) et sont fermes pour la durée convenue dans la proposition commerciale. 
                       Tout changement de périmètre ou demande supplémentaire fera l'objet d'un avenant financier.
@@ -77,7 +69,7 @@ const CGS = () => {
                   </div>
 
                   <div>
-                    <h3 className="text-xl font-semibold text-foreground mb-2">4.2. Modalités de paiement</h3>
+                    <h3 className="mb-2 font-display text-xl font-semibold text-ink">4.2. Modalités de paiement</h3>
                     <ul className="list-disc list-inside space-y-2 ml-4">
                       <li>40% à la commande (acompte)</li>
                       <li>30% à mi-parcours ou à la présentation des livrables intermédiaires</li>
@@ -86,7 +78,7 @@ const CGS = () => {
                   </div>
 
                   <div>
-                    <h3 className="text-xl font-semibold text-foreground mb-2">4.3. Retard de paiement</h3>
+                    <h3 className="mb-2 font-display text-xl font-semibold text-ink">4.3. Retard de paiement</h3>
                     <p>Tout retard de paiement supérieur à 10 jours calendaires à partir de la date d'échéance entraînera de plein droit :</p>
                     <ul className="list-disc list-inside space-y-2 ml-4">
                       <li>L'application d'intérêts de retard au taux légal ivoirien</li>
@@ -98,7 +90,7 @@ const CGS = () => {
               </section>
 
               <section className="space-y-4">
-                <h2 className="text-2xl font-semibold text-foreground">Article 5 : Obligations du client</h2>
+                <h2 className="font-display text-2xl font-semibold text-ink">Article 5 : Obligations du client</h2>
                 <p>Le Client s'engage à :</p>
                 <ul className="list-disc list-inside space-y-2 ml-4">
                   <li>Fournir à SAUSH SARL tous les éléments et documents nécessaires à la bonne exécution de la prestation</li>
@@ -109,7 +101,7 @@ const CGS = () => {
               </section>
 
               <section className="space-y-4">
-                <h2 className="text-2xl font-semibold text-foreground">Article 6 : Propriété intellectuelle</h2>
+                <h2 className="font-display text-2xl font-semibold text-ink">Article 6 : Propriété intellectuelle</h2>
                 <p>
                   Sauf stipulation contraire dans la proposition commerciale, les droits d'exploitation des créations réalisées 
                   par SAUSH SARL sont transférés au Client uniquement après paiement intégral du solde. SAUSH SARL conserve un 
@@ -118,7 +110,7 @@ const CGS = () => {
               </section>
 
               <section className="space-y-4">
-                <h2 className="text-2xl font-semibold text-foreground">Article 7 : Confidentialité</h2>
+                <h2 className="font-display text-2xl font-semibold text-ink">Article 7 : Confidentialité</h2>
                 <p>
                   Chaque partie s'engage à garder strictement confidentielles toutes les informations échangées dans le cadre 
                   de la prestation et à ne les utiliser qu'aux fins de l'exécution du contrat.
@@ -126,7 +118,7 @@ const CGS = () => {
               </section>
 
               <section className="space-y-4">
-                <h2 className="text-2xl font-semibold text-foreground">Article 8 : Responsabilité</h2>
+                <h2 className="font-display text-2xl font-semibold text-ink">Article 8 : Responsabilité</h2>
                 <p>
                   SAUSH SARL met en œuvre tous les moyens nécessaires pour garantir la qualité de ses prestations. Toutefois, 
                   sa responsabilité est limitée au montant des honoraires effectivement perçus pour la prestation concernée.
@@ -134,7 +126,7 @@ const CGS = () => {
               </section>
 
               <section className="space-y-4">
-                <h2 className="text-2xl font-semibold text-foreground">Article 9 : Droit applicable et litiges</h2>
+                <h2 className="font-display text-2xl font-semibold text-ink">Article 9 : Droit applicable et litiges</h2>
                 <p>
                   Les présentes CGS sont régies par le droit ivoirien. En cas de litige, les parties s'engagent à rechercher 
                   une solution amiable. À défaut d'accord, le litige sera porté devant les tribunaux compétents d'Abidjan.
@@ -142,22 +134,20 @@ const CGS = () => {
               </section>
 
               <section className="space-y-4">
-                <h2 className="text-2xl font-semibold text-foreground">Contact</h2>
+                <h2 className="font-display text-2xl font-semibold text-ink">Contact</h2>
                 <p>Pour toute question concernant ces CGS, vous pouvez contacter :</p>
-                <div className="bg-muted/30 p-6 rounded-lg space-y-2">
+                <div className="space-y-2 rounded-2xl border border-ink/10 bg-white p-6">
                   <p><strong>SAUSH SARL</strong></p>
-                  <p><strong>Email :</strong> <a href="mailto:contact@saush.ci" className="text-primary hover:underline">contact@saush.ci</a></p>
+                  <p><strong>Email :</strong> <a href="mailto:contact@saush.ci" className="font-medium text-lime-deep underline underline-offset-2 hover:text-ink">contact@saush.ci</a></p>
                   <p><strong>Adresse :</strong> Cocody Riviera Palmeraie, Abidjan, Côte d'Ivoire</p>
                   <p><strong>Téléphone :</strong> +225 05 06 09 96 54 / 07 57 21 79 67</p>
                 </div>
               </section>
             </div>
           </div>
-        </main>
+        </div>
 
-        <Footer />
-      </div>
-    </>
+        </Layout>
   );
 };
 

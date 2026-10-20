@@ -1,254 +1,108 @@
-import Navigation from "@/components/Navigation";
-import Footer from "@/components/Footer";
-import { Button } from "@/components/ui/button";
-import { Card, CardContent } from "@/components/ui/card";
-import { Input } from "@/components/ui/input";
-import { Textarea } from "@/components/ui/textarea";
-import { Label } from "@/components/ui/label";
+import { ArrowUpRight, Clock, Mail, MapPin, MessageCircle, Phone } from "lucide-react";
+import Layout from "@/components/Layout";
+import QuoteForm from "@/components/QuoteForm";
+import Reveal from "@/components/site/Reveal";
+import { PageHero, SectionHeader } from "@/components/site/blocks";
+import { SocialLinks } from "@/components/site/SocialLinks";
+import { Accordion, AccordionContent, AccordionItem, AccordionTrigger } from "@/components/ui/accordion";
+import { company, faq, telLink, whatsappLink } from "@/data/site";
 
 const Contact = () => {
   return (
-    <div className="min-h-screen bg-card">
-      <Navigation />
-      
-      {/* Hero Section */}
-      <section className="pt-20 pb-20 px-4 bg-card">
-        <div className="container mx-auto text-center">
-          <h1 className="text-4xl lg:text-6xl font-bold mb-8 text-card-foreground">
-            📞 Une idée en tête ?{" "}
-            <span className="gradient-primary bg-clip-text text-transparent">
-              On en parle ?
-            </span>
-          </h1>
-          <p className="text-xl text-card-foreground max-w-3xl mx-auto leading-relaxed mb-12">
-            Chaque grande collaboration commence par une conversation. 
-            Dites-nous ce que vous voulez accomplir et nous trouverons la potion adaptée.
-          </p>
-        </div>
-      </section>
+    <Layout title="Contact" description="Contactez SAUSH à Abidjan (Cocody Riviera Palmeraie) : devis gratuit, réponse sous 24h par e-mail, téléphone ou WhatsApp.">
+      <PageHero
+        eyebrow="Contact"
+        title={<>Une idée en tête&nbsp;? <span className="serif-accent text-lime-deep">Parlons-en.</span></>}
+        intro="Chaque grande collaboration commence par une conversation. Dites-nous ce que vous voulez accomplir : nous revenons vers vous sous 24h."
+      />
 
-      <section className="pb-20 px-4 bg-card">
-        <div className="container mx-auto max-w-4xl">
-          <div className="grid lg:grid-cols-2 gap-12">
-            {/* Contact Form */}
-            <Card className="bg-background border-border shadow-magical">
-              <CardContent className="p-8">
-                <h2 className="text-2xl font-bold mb-6 text-center text-foreground">
-                  ✨ Formulaire magique
-                </h2>
-                <form className="space-y-6">
-                  <div className="grid md:grid-cols-2 gap-4">
-                    <div className="space-y-2">
-                      <Label htmlFor="firstName" className="text-foreground">Prénom *</Label>
-                      <Input 
-                        id="firstName"
-                        placeholder="Votre prénom"
-                        className="bg-background border-border focus:ring-primary text-foreground"
-                      />
-                    </div>
-                    <div className="space-y-2">
-                      <Label htmlFor="lastName" className="text-foreground">Nom *</Label>
-                      <Input 
-                        id="lastName"
-                        placeholder="Votre nom"
-                        className="bg-background border-border focus:ring-primary text-foreground"
-                      />
-                    </div>
-                  </div>
-                  
-                  <div className="space-y-2">
-                    <Label htmlFor="email" className="text-foreground">Email *</Label>
-                    <Input 
-                      id="email"
-                      type="email"
-                      placeholder="votre@email.com"
-                      className="bg-background border-border focus:ring-primary text-foreground"
-                    />
-                  </div>
-                  
-                  <div className="space-y-2">
-                    <Label htmlFor="phone" className="text-foreground">Téléphone / WhatsApp</Label>
-                    <Input 
-                      id="phone"
-                      type="tel"
-                      placeholder="+225 XX XX XX XX XX"
-                      className="bg-background border-border focus:ring-primary text-foreground"
-                    />
-                  </div>
-                  
-                  <div className="space-y-2">
-                    <Label htmlFor="project" className="text-foreground">Votre projet en quelques lignes *</Label>
-                    <Textarea 
-                      id="project"
-                      placeholder="Décrivez-nous votre projet, vos objectifs, vos besoins..."
-                      rows={5}
-                      className="bg-background border-border focus:ring-primary resize-none text-foreground"
-                    />
-                  </div>
+      <section className="pb-24 sm:pb-32">
+        <div className="container grid gap-12 lg:grid-cols-12 lg:gap-16">
+          <Reveal className="rounded-[2rem] border border-ink/10 bg-white p-6 sm:p-10 lg:col-span-7">
+            <h2 className="font-display text-3xl font-semibold text-ink">Votre demande</h2>
+            <p className="mb-8 mt-2 text-ink-muted">Gratuit, sans engagement, et lu par une vraie personne.</p>
+            <QuoteForm />
+          </Reveal>
 
-                  <div className="space-y-2">
-                    <Label className="text-foreground">Quelle potion vous intéresse ?</Label>
-                    <div className="grid grid-cols-2 gap-2">
-                      <label className="flex items-center space-x-2 cursor-pointer">
-                        <input type="checkbox" className="rounded border-border text-primary focus:ring-primary" />
-                        <span className="text-sm text-foreground">🔮 Identité</span>
-                      </label>
-                      <label className="flex items-center space-x-2 cursor-pointer">
-                        <input type="checkbox" className="rounded border-border text-primary focus:ring-primary" />
-                        <span className="text-sm text-foreground">🔮 Stratégie</span>
-                      </label>
-                      <label className="flex items-center space-x-2 cursor-pointer">
-                        <input type="checkbox" className="rounded border-border text-primary focus:ring-primary" />
-                        <span className="text-sm text-foreground">🔮 Digital</span>
-                      </label>
-                      <label className="flex items-center space-x-2 cursor-pointer">
-                        <input type="checkbox" className="rounded border-border text-primary focus:ring-primary" />
-                        <span className="text-sm text-foreground">🔮 Diagnostic</span>
-                      </label>
-                    </div>
+          <div className="space-y-6 lg:col-span-5">
+            <Reveal delay={100} className="grain rounded-[2rem] bg-ink p-8 text-paper sm:p-10">
+              <h2 className="font-display text-2xl font-semibold">Contact direct</h2>
+              <ul className="mt-8 space-y-6">
+                <li className="flex gap-4">
+                  <Mail className="mt-1 h-5 w-5 shrink-0 text-lime-bright" />
+                  <div>
+                    <p className="text-sm text-paper/50">E-mail</p>
+                    <a href={`mailto:${company.email}`} className="link-underline text-lg">{company.email}</a>
                   </div>
-                  
-                  <Button className="w-full gradient-primary text-primary-foreground hover:shadow-magical transition-magical text-lg py-6">
-                    Envoyer ma demande 🔮
-                  </Button>
-                  
-                  <p className="text-xs text-muted-foreground text-center">
-                    * Champs obligatoires. Nous vous répondrons sous 24h maximum.
-                  </p>
-                </form>
-              </CardContent>
-            </Card>
+                </li>
+                <li className="flex gap-4">
+                  <Phone className="mt-1 h-5 w-5 shrink-0 text-lime-bright" />
+                  <div>
+                    <p className="text-sm text-paper/50">Téléphone</p>
+                    {company.phones.map((p) => (
+                      <a key={p} href={telLink(p)} className="link-underline block w-fit text-lg">{p}</a>
+                    ))}
+                  </div>
+                </li>
+                <li className="flex gap-4">
+                  <MapPin className="mt-1 h-5 w-5 shrink-0 text-lime-bright" />
+                  <div>
+                    <p className="text-sm text-paper/50">Adresse</p>
+                    <p className="text-lg">{company.address}</p>
+                  </div>
+                </li>
+                <li className="flex gap-4">
+                  <Clock className="mt-1 h-5 w-5 shrink-0 text-lime-bright" />
+                  <div>
+                    <p className="text-sm text-paper/50">Horaires</p>
+                    <p className="text-lg">{company.hours}</p>
+                  </div>
+                </li>
+              </ul>
+              <a
+                href={whatsappLink("Bonjour SAUSH, j'aimerais parler d'un projet.")}
+                target="_blank"
+                rel="noopener noreferrer"
+                className="btn btn-lime mt-10 w-full"
+              >
+                <MessageCircle className="h-4 w-4" /> Discuter sur WhatsApp <ArrowUpRight className="h-4 w-4" />
+              </a>
+              <div className="mt-8 border-t border-paper/10 pt-6">
+                <SocialLinks variant="dark" />
+              </div>
+            </Reveal>
 
-            {/* Contact Info */}
-            <div className="space-y-8">
-              {/* Direct Contact */}
-              <Card className="bg-background border-border">
-                <CardContent className="p-6">
-                  <h3 className="text-xl font-bold mb-4 text-primary">📲 Contact direct</h3>
-                  <div className="space-y-4">
-                    <div className="flex items-center space-x-3">
-                      <div className="w-10 h-10 gradient-primary rounded-lg flex items-center justify-center">
-                        <span className="text-sm text-primary-foreground">📧</span>
-                      </div>
-                      <div>
-                        <p className="font-medium text-foreground">Email</p>
-                        <p className="text-sm text-muted-foreground">infos@saush.africa</p>
-                      </div>
-                    </div>
-                    
-                    <div className="flex items-center space-x-3">
-                      <div className="w-10 h-10 gradient-gold rounded-lg flex items-center justify-center">
-                        <span className="text-sm text-secondary-foreground">📞</span>
-                      </div>
-                      <div>
-                        <p className="font-medium text-foreground">Téléphone</p>
-                        <p className="text-sm text-muted-foreground">+225 XX XX XX XX XX</p>
-                      </div>
-                    </div>
-                    
-                    <div className="pt-4">
-                      <Button className="w-full gradient-gold text-secondary-foreground hover:shadow-gold transition-magical">
-                        WhatsApp (clic direct) 💬
-                      </Button>
-                    </div>
-                  </div>
-                </CardContent>
-              </Card>
-
-              {/* Process */}
-              <Card className="bg-gradient-primary text-primary-foreground">
-                <CardContent className="p-6">
-                  <h3 className="text-xl font-bold mb-4">⚡ Notre processus express</h3>
-                  <div className="space-y-3">
-                    <div className="flex items-center space-x-3">
-                      <div className="w-8 h-8 bg-primary-foreground text-primary rounded-full flex items-center justify-center text-sm font-bold">
-                        1
-                      </div>
-                      <p className="text-sm">Vous envoyez votre demande</p>
-                    </div>
-                    <div className="flex items-center space-x-3">
-                      <div className="w-8 h-8 bg-primary-foreground text-primary rounded-full flex items-center justify-center text-sm font-bold">
-                        2
-                      </div>
-                      <p className="text-sm">Nous vous recontactons sous 24h</p>
-                    </div>
-                    <div className="flex items-center space-x-3">
-                      <div className="w-8 h-8 bg-primary-foreground text-primary rounded-full flex items-center justify-center text-sm font-bold">
-                        3
-                      </div>
-                      <p className="text-sm">Échange pour comprendre vos besoins</p>
-                    </div>
-                    <div className="flex items-center space-x-3">
-                      <div className="w-8 h-8 bg-primary-foreground text-primary rounded-full flex items-center justify-center text-sm font-bold">
-                        4
-                      </div>
-                      <p className="text-sm">Proposition personnalisée</p>
-                    </div>
-                  </div>
-                </CardContent>
-              </Card>
-
-              {/* FAQ */}
-              <Card className="bg-background border-border">
-                <CardContent className="p-6">
-                  <h3 className="text-xl font-bold mb-4 text-accent">❓ Questions fréquentes</h3>
-                  <div className="space-y-4">
-                    <div>
-                      <p className="font-medium text-sm mb-1 text-foreground">Combien de temps pour une réponse ?</p>
-                      <p className="text-xs text-muted-foreground">Maximum 24h, souvent dans la journée.</p>
-                    </div>
-                    <div>
-                      <p className="font-medium text-sm mb-1 text-foreground">Le devis est-il gratuit ?</p>
-                      <p className="text-xs text-muted-foreground">Oui, totalement gratuit et sans engagement.</p>
-                    </div>
-                    <div>
-                      <p className="font-medium text-sm mb-1 text-foreground">Vous travaillez avec toutes les entreprises ?</p>
-                      <p className="text-xs text-muted-foreground">Startups, PME, grandes marques... Nous nous adaptons à tous les projets.</p>
-                    </div>
-                  </div>
-                </CardContent>
-              </Card>
-            </div>
+            <Reveal delay={200} className="overflow-hidden rounded-[2rem] border border-ink/10">
+              <iframe
+                title="Localisation de SAUSH à Cocody Riviera Palmeraie, Abidjan"
+                src="https://www.google.com/maps?q=Riviera+Palmeraie,+Cocody,+Abidjan&output=embed"
+                className="h-72 w-full grayscale-[0.3]"
+                loading="lazy"
+                referrerPolicy="no-referrer-when-downgrade"
+              />
+            </Reveal>
           </div>
         </div>
       </section>
 
-      {/* CTA Section */}
-      <section className="py-20 px-4 bg-muted/20">
-        <div className="container mx-auto text-center">
-          <div className="max-w-3xl mx-auto">
-            <h2 className="text-3xl lg:text-4xl font-bold mb-6 text-card-foreground">
-              Prêt à commencer l'{" "}
-              <span className="gradient-potion bg-clip-text text-transparent">
-                alchimie créative
-              </span>
-              ?
-            </h2>
-            <p className="text-lg text-muted-foreground mb-8">
-              Que ce soit pour une question, un projet ou juste pour dire bonjour, 
-              nous sommes là pour vous écouter et vous accompagner.
-            </p>
-            <div className="flex flex-col sm:flex-row gap-4 justify-center">
-              <Button 
-                size="lg" 
-                className="gradient-primary text-primary-foreground hover:shadow-magical transition-magical text-lg px-8 py-6"
-              >
-                Diagnostic gratuit 🔍
-              </Button>
-              <Button 
-                variant="outline" 
-                size="lg"
-                className="border-2 border-secondary text-secondary hover:bg-secondary hover:text-secondary-foreground transition-magical text-lg px-8 py-6"
-              >
-                Voir nos réalisations 🔥
-              </Button>
-            </div>
+      <section className="bg-paper-deep/60 py-24">
+        <div className="container grid gap-12 lg:grid-cols-12">
+          <div className="lg:col-span-4">
+            <SectionHeader eyebrow="Questions fréquentes" title={<>Avant de <span className="serif-accent">nous écrire.</span></>} />
           </div>
+          <Reveal className="lg:col-span-8">
+            <Accordion type="single" collapsible className="border-t border-ink/10">
+              {faq.map((f, i) => (
+                <AccordionItem key={f.q} value={`c-${i}`} className="border-ink/10">
+                  <AccordionTrigger className="py-6 text-left font-display text-xl font-semibold text-ink hover:no-underline">{f.q}</AccordionTrigger>
+                  <AccordionContent className="pb-6 text-base leading-relaxed text-ink-muted">{f.a}</AccordionContent>
+                </AccordionItem>
+              ))}
+            </Accordion>
+          </Reveal>
         </div>
       </section>
-      
-      <Footer />
-    </div>
+    </Layout>
   );
 };
 

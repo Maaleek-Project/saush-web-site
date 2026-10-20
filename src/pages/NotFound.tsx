@@ -1,27 +1,24 @@
-import { useLocation } from "react-router-dom";
-import { useEffect } from "react";
+import { Link } from "react-router-dom";
+import Layout from "@/components/Layout";
 
-const NotFound = () => {
-  const location = useLocation();
-
-  useEffect(() => {
-    console.error(
-      "404 Error: User attempted to access non-existent route:",
-      location.pathname
-    );
-  }, [location.pathname]);
-
-  return (
-    <div className="min-h-screen flex items-center justify-center bg-gray-100">
-      <div className="text-center">
-        <h1 className="text-4xl font-bold mb-4">404</h1>
-        <p className="text-xl text-gray-600 mb-4">Oops! Page not found</p>
-        <a href="/" className="text-blue-500 hover:text-blue-700 underline">
-          Return to Home
-        </a>
+const NotFound = () => (
+  <Layout title="Page introuvable">
+    <section className="flex min-h-[80vh] items-center pt-24">
+      <div className="container max-w-3xl text-center">
+        <p className="font-display text-[8rem] font-semibold leading-none tracking-tighter text-ink sm:text-[12rem]">
+          4<span className="serif-accent text-lime-deep">0</span>4
+        </p>
+        <h1 className="mt-4 font-display text-3xl font-semibold text-ink sm:text-4xl">Cette formule n'existe pas (encore).</h1>
+        <p className="mx-auto mt-4 max-w-md text-lg text-ink-muted">
+          La page que vous cherchez a peut-être changé d'adresse. Reprenons depuis le début.
+        </p>
+        <div className="mt-10 flex flex-col justify-center gap-3 sm:flex-row">
+          <Link to="/" className="btn btn-ink">Retour à l'accueil</Link>
+          <Link to="/contact" className="btn btn-outline">Nous contacter</Link>
+        </div>
       </div>
-    </div>
-  );
-};
+    </section>
+  </Layout>
+);
 
 export default NotFound;
